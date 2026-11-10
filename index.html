@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JoVenGer mods</title><style>
+:root{--fond:#f3ead7;--papier:#fbf6ea;--encre:#2b2118;--doux:#6b5a48;--brun:#5a3a22;--or:#b8893b;--ligne:#e0d3b8;--lien:#7a3b12}
+@media (prefers-color-scheme: dark){:root{--fond:#1d1812;--papier:#26201a;--encre:#efe6d6;--doux:#bfae96;--brun:#d8b27a;--or:#d1a24f;--ligne:#3b3226;--lien:#e6a96b}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.65 Georgia,"Times New Roman",serif}
+header{background:var(--brun);color:#fbf3e2;padding:28px 16px 22px;text-align:center}
+@media (prefers-color-scheme: dark){header{color:#1d1812}}
+header h1{margin:0;font-size:2.1rem;letter-spacing:.5px}header p{margin:.4rem 0 0;opacity:.9}
+.langues{margin-top:14px;display:flex;gap:8px;justify-content:center}
+.langues button{font:inherit;border:1px solid currentColor;background:transparent;color:inherit;border-radius:6px;padding:4px 14px;cursor:pointer}
+.langues button[aria-pressed=true]{background:#fbf3e2;color:#5a3a22;font-weight:bold}
+main{max-width:920px;margin:0 auto;padding:16px}
+.carte{background:var(--papier);border:1px solid var(--ligne);border-radius:10px;padding:18px 22px;margin:18px 0}
+.vedette{border:2px solid var(--or)}
+nav.sommaire ol{columns:2;column-gap:28px;padding-left:22px}@media (max-width:640px){nav.sommaire ol{columns:1}}
+nav.sommaire a{color:var(--lien);text-decoration:none}nav.sommaire a:hover{text-decoration:underline}
+h2{color:var(--brun);border-bottom:2px solid var(--or);padding-bottom:4px;margin-top:2.2rem;scroll-margin-top:12px}
+h3{color:var(--brun);margin-top:1.4rem}
+a{color:var(--lien)}hr{border:0;border-top:1px solid var(--ligne);margin:2rem 0}
+blockquote{margin:1rem 0;padding:10px 16px;border-left:4px solid var(--or);background:var(--papier);border-radius:0 8px 8px 0}
+.table{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--ligne);padding:6px 9px;text-align:left;vertical-align:top}th{background:var(--ligne)}
+footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9rem}
+.haut{position:fixed;right:14px;bottom:14px;background:var(--brun);color:#fbf3e2;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px}
+[data-langue]{display:none}[data-langue].vue{display:block}
+</style></head>
+<body><header><h1>JoVenGer</h1><p>Mods for Kingdom Come: Deliverance II</p></header>
+<main><div class="carte vedette"><h2 style="margin-top:0">Scriptorium</h2>
+<p>A camp and mercenary company mod: found your camp, hire soldiers and craftsmen, train them and send them on missions.</p>
+<p>Un mod de camp et de compagnie de mercenaires : fondez votre camp, engagez soldats et artisans, entraînez-les et envoyez-les en mission.</p>
+<p><a href="scriptorium/"><strong>The complete guide / Le guide complet</strong></a></p></div></main>
+<footer>JoVenGer</footer></body></html>

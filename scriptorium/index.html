@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scriptorium guide</title>
+<meta name="description" content="Scriptorium, a camp and mercenary company mod for Kingdom Come: Deliverance II, by JoVenGer: the complete guide and the camp dictionary.">
+<style>
+:root{--fond:#f3ead7;--papier:#fbf6ea;--encre:#2b2118;--doux:#6b5a48;--brun:#5a3a22;--or:#b8893b;--ligne:#e0d3b8;--lien:#7a3b12}
+@media (prefers-color-scheme: dark){:root{--fond:#1d1812;--papier:#26201a;--encre:#efe6d6;--doux:#bfae96;--brun:#d8b27a;--or:#d1a24f;--ligne:#3b3226;--lien:#e6a96b}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.65 Georgia,"Times New Roman",serif}
+header{background:var(--brun);color:#fbf3e2;padding:28px 16px 22px;text-align:center}
+@media (prefers-color-scheme: dark){header{color:#1d1812}}
+header h1{margin:0;font-size:2.1rem;letter-spacing:.5px}header p{margin:.4rem 0 0;opacity:.9}
+.langues{margin-top:14px;display:flex;gap:8px;justify-content:center}
+.langues button{font:inherit;border:1px solid currentColor;background:transparent;color:inherit;border-radius:6px;padding:4px 14px;cursor:pointer}
+.langues button[aria-pressed=true]{background:#fbf3e2;color:#5a3a22;font-weight:bold}
+main{max-width:920px;margin:0 auto;padding:16px}
+.carte{background:var(--papier);border:1px solid var(--ligne);border-radius:10px;padding:18px 22px;margin:18px 0}
+.vedette{border:2px solid var(--or)}
+nav.sommaire ol{columns:2;column-gap:28px;padding-left:22px}@media (max-width:640px){nav.sommaire ol{columns:1}}
+nav.sommaire a{color:var(--lien);text-decoration:none}nav.sommaire a:hover{text-decoration:underline}
+h2{color:var(--brun);border-bottom:2px solid var(--or);padding-bottom:4px;margin-top:2.2rem;scroll-margin-top:12px}
+h3{color:var(--brun);margin-top:1.4rem}
+a{color:var(--lien)}hr{border:0;border-top:1px solid var(--ligne);margin:2rem 0}
+blockquote{margin:1rem 0;padding:10px 16px;border-left:4px solid var(--or);background:var(--papier);border-radius:0 8px 8px 0}
+.table{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--ligne);padding:6px 9px;text-align:left;vertical-align:top}th{background:var(--ligne)}
+footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9rem}
+.haut{position:fixed;right:14px;bottom:14px;background:var(--brun);color:#fbf3e2;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px}
+[data-langue]{display:none}[data-langue].vue{display:block}
+</style></head>
+<body><header id="haut"><h1>Scriptorium</h1>
+<p data-langue="fr">Le guide complet du camp — version 2.1.0 — un mod de JoVenGer pour Kingdom Come: Deliverance II</p>
+<p data-langue="en">The complete camp guide — version 2.1.0 — a mod by JoVenGer for Kingdom Come: Deliverance II</p>
+<div class="langues"><button data-l="fr" onclick="choisir('fr')">Français</button><button data-l="en" onclick="choisir('en')">English</button></div></header>
+<main><div data-langue="fr"><div class="carte vedette">
+<p>Avec Scriptorium, Henry fonde et dirige sa propre compagnie de mercenaires. Il achète une patente, plante son camp où il le veut, engage des soldats et des artisans, puis les fait vivre, s'entraîner et partir en mission. Ce guide explique tout, dans l'ordre, pour bien démarrer, même avec peu d'argent.</p></div><nav class="carte sommaire"><h3>Sommaire</h3><ol><li><a href="#fr-ch1">Bien commencer, avec peu d'argent</a></li><li><a href="#fr-ch2">Le menu U, le programme et le Directeur</a></li><li><a href="#fr-ch3">La construction est libre</a></li><li><a href="#fr-ch4">Les tentes et les lits</a></li><li><a href="#fr-ch5">Les réservations</a></li><li><a href="#fr-ch6">L'entraînement</a></li><li><a href="#fr-ch7">Les soldats</a></li><li><a href="#fr-ch8">Les missions et l'argent</a></li><li><a href="#fr-ch9">Bien monter un artisan</a></li><li><a href="#fr-ch10">Les métiers et leurs chaînes</a></li><li><a href="#fr-ch11">Le dictionnaire du camp</a></li><li><a href="#fr-ch12">Les touches</a></li><li><a href="#fr-ch13">Les pièges à éviter</a></li></ol></nav><div class="carte"><h2 id="fr-ch1">1. Bien commencer, avec peu d'argent</h2>
+<p>Le camp coûte cher au début et rapporte ensuite. Le secret : aller pas à pas, et ne rien acheter avant d'en avoir besoin. La quête « Les premiers pas de la compagnie » vous guide étape par étape ; ce chapitre vous dit en plus pourquoi.</p>
+<h3>Étape 1 — La patente (30 000 gros)</h3>
+<ul>
+<li>Sans patente, impossible de fonder un camp.</li>
+<li>Le notaire la vend à <strong>Kuttenberg</strong> (sous une grande tente, au pied de la tour de l'hôtel de ville, sur la place) ou à <strong>Troskowitz</strong> (dans la cour de l'hôtel de ville).</li>
+<li>Appuyez sur <strong>E</strong> sur son pupitre, ou parlez-lui.</li>
+<li>Elle coûte <strong>30 000 gros</strong>, pris dans la bourse d'Henry : 20 000 paient l'autorisation, et <strong>10 000 vont au coffre du camp</strong>. Ces 10 000 gros sont votre fonds de départ.</li>
+<li>Plus tard, le même notaire vous rachètera le camp si vous voulez le vendre.</li>
+</ul>
+<h3>Étape 2 — Choisir la place et poser sa tente</h3>
+<ul>
+<li>Choisissez un terrain <strong>plat</strong> : un objet ne se pose pas sur une pente de plus de 20°.</li>
+<li>Préférez un endroit où <strong>l'herbe est courte</strong> : l'herbe du jeu traverse les tentes. Une option « Sol sans herbe autour du camp » existe aussi (menu U, Aménagement du camp).</li>
+<li>Regardez dans la direction que vous voulez donner au camp : il prend le sens de votre regard.</li>
+<li>Menu <strong>U › Aménagement du camp › Poser ma tente ici : le camp</strong>.</li>
+<li>Votre tente vous est offerte : une grande tente carrée, un lit haut et un coffre. Le <strong>coffret de la banque</strong> (E : la Banque) et la <strong>tente miniature</strong> (E : la Gestion du camp) sont posés avec elle.</li>
+</ul>
+<h3>Étape 3 — Engager le Directeur (gratuit)</h3>
+<ul>
+<li>Menu <strong>U › Embauche › Le service › Le Directeur</strong>. Il est compris dans la patente.</li>
+<li>Il pose seul ses deux tentes, son bureau et son lit.</li>
+<li>C'est lui qui tient les comptes, trouve les missions, remplace les morts, recharge les feux et surveille les caisses. Parlez-lui souvent.</li>
+</ul>
+<h3>Étape 4 — Garder le coffre au-dessus de 10 000 gros</h3>
+<ul>
+<li>Sous <strong>10 000 gros</strong>, le camp se met en économie : pas de part pour Henry ni pour le Directeur, et les primes des hommes attendent.</li>
+<li>Déposez de l'argent par le Directeur (« Le coffre. ») ou au menu U, page Banque.</li>
+<li>Ce n'est pas perdu : chaque dépôt d'Henry est une dette du camp envers lui. Chaque semaine, la banque lui rend la moitié de ce qui dépasse 12 000 gros.</li>
+</ul>
+<h3>Étape 5 — Des lits, une table et un feu, pas plus</h3>
+<ul>
+<li>Posez <strong>un lit par homme que vous voulez engager</strong>, pas davantage. Le <strong>lit bas</strong> est gratuit. La <strong>Tente des hommes</strong> (300 gros) contient déjà 4 lits.</li>
+<li>Posez une <strong>table</strong> (une petite table et un tabouret coûtent 20 gros) et un <strong>feu de camp</strong> (20 gros). Sans siège, les hommes mangent debout.</li>
+<li>Réglez la <strong>taille de la compagnie</strong> (menu U et programme) : le Directeur remplace les morts jusqu'à cette taille, et jamais au-delà. Il lui faut aussi un lit libre et deux jours de vivres.</li>
+</ul>
+<h3>Étape 6 — Engager les premiers hommes</h3>
+<ul>
+<li>Menu <strong>U › Embauche</strong> : choisissez le style d'armes et le nombre (1, 3, 5 ou 10).</li>
+<li>Prix : recrue 250 gros, archer 450, arbalétrier 570 (la recrue plus son arme de tir). Tous entrent comme novices.</li>
+<li><strong>Tout homme entre au bas de l'échelle</strong>, au niveau 6, et monte en s'entraînant et en combattant : il devient confirmé au niveau 10, puis vétéran au niveau 20.</li>
+<li>Commencez avec <strong>8 hommes</strong>. Dans un petit camp, un homme sur quatre seulement est de garde : avec 8 hommes, 6 peuvent partir en mission.</li>
+</ul>
+<h3>Étape 7 — Entraîner, c'est presque gratuit</h3>
+<ul>
+<li>L'<strong>exercice du matin</strong> (de 8 h à 12 h) est obligatoire pour tous.</li>
+<li>Un <strong>râtelier d'entraînement</strong> (60 gros) permet les duels à l'épée de bois, un <strong>mannequin de paille</strong> (40 gros) l'exercice seul, une <strong>cible</strong> (40 gros) le tir. Voir le chapitre 6.</li>
+<li>Un homme qui atteint le <strong>niveau 10</strong> devient confirmé et se bat mieux.</li>
+</ul>
+<h3>Étape 8 — La forge, quand l'équipement s'use (5 000 gros)</h3>
+<ul>
+<li>Un homme dont une pièce d'équipement est <strong>sous 30 %</strong> ne part plus en mission.</li>
+<li>Le <strong>forgeron</strong> répare : l'homme paie de sa bourse, à crédit s'il n'a rien. La forge est le premier artisan à engager.</li>
+</ul>
+<h3>Étape 9 — La première mission</h3>
+<ul>
+<li>Parlez au Directeur : <strong>« Les missions. » › « Trouve-nous une mission. »</strong></li>
+<li>S'il répond « Rien de sûr pour l'instant », vos hommes ne sont pas encore prêts : voir le chapitre 8.</li>
+<li>Quand il ne trouve aucune mission normale à la mesure d'un camp faible, il prend une <strong>petite bande de 2 ou 3 pillards</strong>. C'est moins payé, mais plus sûr, et les hommes progressent.</li>
+</ul>
+<h3>Ensuite, dans cet ordre</h3>
+<ol>
+<li><strong>Les vivres</strong> : les chasseurs, ou le jardinier avec un potager. Le coffre cesse alors d'acheter les vivres en ville, à 20 gros l'unité.</li>
+<li><strong>La boisson et le bois</strong> : le porteur d'eau (la boisson ne s'achète jamais en ville), puis le bûcheron (bois des feux, charbon de la forge).</li>
+<li><strong>Le coursier</strong> : il achète en ville ce qui manque et revend le butin.</li>
+<li><strong>Plus tard</strong> : l'armurier, les bains, la taverne, la vivandière, le boucher, le palefrenier et les chevaux.</li>
+<li><strong>Le décor</strong>, en dernier : il est beau, mais il ne rapporte rien.</li>
+</ol>
+<blockquote><strong>Si le coffre baisse trop</strong> : demandez au Directeur « Les grandes mesures. » › « Serre les dépenses. ». Il arrête de remplacer les hommes et réduit les achats.</blockquote>
+<hr>
+<h2 id="fr-ch2">2. Le menu U, le programme et le Directeur</h2>
+<p>Le camp se gère de trois façons, qui agissent toutes sur le même camp et le même coffre.</p>
+<ul>
+<li><strong>La touche U</strong> : le menu dans le jeu. U l'ouvre et le referme (Échap ne le ferme pas). Juste après un chargement, attendez quelques secondes avant d'appuyer.</li>
+<li><strong>La touche H</strong> : le programme « Gestion du camp », une fenêtre à part devant le jeu. Il faut l'avoir installé et lancé ; sans lui, H ne fait rien et U marche toujours.</li>
+<li><strong>Le Directeur</strong> : parlez-lui. Ses sujets : « Comment va le camp ? », « Les missions. », « Que me conseilles-tu ? », « Des fautes aujourd'hui ? », « Le coffre. », « Les grandes mesures. ».</li>
+</ul>
+<p><strong>La lettre du Directeur</strong> : chaque semaine, il vous écrit. Elle se lit au menu U : le coffre, les rentrées, les dépenses, le bénéfice, les missions gagnées, les morts et ce qu'ils ont coûté. Il y propose trois mesures, et vous en choisissez une.</p>
+<hr>
+<h2 id="fr-ch3">3. La construction est libre</h2>
+<p><strong>Rien ne se pose tout seul</strong> : tentes, lits, tables, ateliers, c'est vous qui les placez, où vous voulez. Votre camp peut être un petit bivouac ou une vraie ville de toile.</p>
+<h3>Poser un objet depuis le menu U</h3>
+<ul>
+<li><strong>U › Aménagement du camp › Poser un objet</strong>, puis choisissez dans le catalogue.</li>
+<li>L'objet apparaît 4 m devant Henry. <strong>Il est payé au clic</strong>, sans confirmation.</li>
+<li>Sa page propose : tourner de 45° ou de 15°, avancer ou reculer d'un mètre, « C'est bien ici », et « Retirer cet objet ».</li>
+<li><strong>Déplacer est gratuit. Retirer ne rembourse pas.</strong></li>
+</ul>
+<h3>Le plan du camp (vue d'en haut)</h3>
+<ul>
+<li><strong>U › Aménagement du camp › Le plan du camp.</strong> Henry reste immobile pendant ce temps.</li>
+<li><strong>Clic gauche</strong> sur un objet : le choisir. <strong>Glisser</strong> un objet : le déplacer. <strong>Glisser dans le vide</strong> : choisir tout un groupe.</li>
+<li><strong>Molette</strong> sur un objet choisi : le tourner. Molette ailleurs : le zoom. <strong>Clic droit glissé</strong> : déplacer la vue.</li>
+<li><strong>Clic droit</strong> sans bouger : le menu du plan (déplacer, copier, coller, réserver, poser un objet à cet endroit, les zones, la vue, sortir).</li>
+<li><strong>T</strong> : cacher ou montrer les tentes, pour voir les lits dedans. <strong>Z</strong> : annuler la dernière action. <strong>Échap</strong> : sortir du plan.</li>
+<li>Une tente visible emporte avec elle ce qu'elle contient. Un étal emporte sa caisse.</li>
+<li><strong>Annuler (Z)</strong> rembourse une pose ou rend un objet retiré, mais seulement tant que le plan est ouvert.</li>
+<li>Les copies se paient. Certains objets uniques ne se copient pas (votre tente, le Directeur et son bureau, le coffret de la banque…).</li>
+</ul>
+<h3>Les règles de pose</h3>
+<ul>
+<li>Pas de pente de plus de 20°.</li>
+<li><strong>Les latrines</strong> se posent à 20 m au moins d'une tente, d'un feu ou de la cuisine.</li>
+<li>Les postes d'un seul artisan (étal du tavernier, comptoir des bains, atelier de l'armurier…) ne se posent qu'une fois.</li>
+<li>Le coffre du camp doit couvrir le prix.</li>
+<li>On traverse les meubles : seules votre tente et la tour de guet sont solides.</li>
+<li>Un coffre qui contient quelque chose ne se retire pas.</li>
+</ul>
+<h3>Les installations</h3>
+<p>Menu <strong>U › Aménagement du camp › Constructions du camp</strong>, ou au plan : clic droit › Poser un objet › Installations à acheter. Chacune est unique : arène, terrain d'entraînement, établi à flèches, coin cuisine, tonneau de vin, banc du camp, bassines, feuillée. Aujourd'hui, seules les <strong>bassines</strong> ont un effet : les hommes sales y vont se laver. Les autres sont du décor (des effets réels sont prévus plus tard). Une installation retirée doit être rachetée pour revenir.</p>
+<hr>
+<h2 id="fr-ch4">4. Les tentes et les lits</h2>
+<p><strong>Une tente n'est qu'un abri. Ce sont les lits qui logent les hommes.</strong> Posez les lits dans les tentes ; la touche T, au plan, aide à les voir.</p>
+<h3>Une tente par artisan, à part des soldats</h3>
+<p>C'est possible, et c'est conseillé :</p>
+<ol>
+<li>Posez une tente, puis autant de lits que vous voulez dedans.</li>
+<li><strong>Réservez chaque lit</strong> au métier (chapitre 5). Le premier lit réservé aux chasseurs va au premier chasseur, le deuxième au second, et ainsi de suite.</li>
+<li>Un artisan sans lit réservé prend un lit des soldats, et il en manquera un pour la compagnie.</li>
+</ol>
+<h3>La nuit</h3>
+<ul>
+<li>À <strong>22 h</strong>, chacun prend un lit libre. Sans lit, il dort au sol près d'un feu.</li>
+<li><strong>La garde</strong> : dans un petit camp, un homme sur quatre ; à partir de 24 hommes, la moitié. On prend d'abord ceux qui n'ont pas de lit. La ronde se règle au menu U, page Personnel.</li>
+<li>Le <strong>colonel</strong>, à son inspection, dit s'il manque des lits ou des places assises : il veut un lit par homme et un siège par homme hors de la ronde.</li>
+</ul>
+<h3>Les camarades de chambrée</h3>
+<ul>
+<li>Deux lits à <strong>4 m ou moins</strong> comptent comme la même tente : chaque nuit, les deux dormeurs gagnent un peu d'amitié. Des camarades se battent mieux ensemble ; deux rivaux se disputent.</li>
+<li>Un <strong>feu de chambrée</strong> sert de place au repas pour les hommes dont le lit est à 14 m ou moins.</li>
+</ul>
+<hr>
+<h2 id="fr-ch5">5. Les réservations</h2>
+<p>Réserver un objet, c'est le donner à quelqu'un : plus personne d'autre ne s'en sert.</p>
+<h3>Comment faire</h3>
+<ul>
+<li>Au <strong>plan</strong> : choisissez les objets (clic, ou glisser pour en prendre plusieurs), puis <strong>clic droit › Réservé à…</strong></li>
+<li>Pour qui : Henry, les dames des bains, le forgeron, le coursier, le Directeur, les chasseurs, le jardinier, le porteur d'eau, le bûcheron, la taverne, les compagnons, l'armurier, le colonel, le palefrenier, la vivandière, le boucher, ou <strong>Personne</strong> (ouvert aux hommes).</li>
+<li>Le programme (touche H) le permet aussi. Z annule une réservation.</li>
+</ul>
+<h3>Ce que cela change</h3>
+<ul>
+<li><strong>Pour Henry</strong> : un lit réservé est le sien ; il s'y couche, et <strong>la partie est sauvegardée à son réveil</strong>. Le baquet, le point d'eau, le prie-Dieu, le séchoir, le fumoir, le foyer et le tonneau de vin ne servent à Henry que s'ils lui sont réservés. Une tente réservée à Henry devient sa maison.</li>
+<li><strong>Pour un métier</strong> : ses lits vont à ses gens, dans l'ordre. Un étal réservé à un métier prend son décor et devient son stand ; sa caisse s'y pose.</li>
+<li><strong>Pour le colonel</strong> : son premier lit réservé est à lui seul, et le colonel suivant en hérite.</li>
+<li><strong>Pour les compagnons nommés</strong> : leurs lits ne sont jamais pris par un mercenaire.</li>
+<li><strong>Pour la taverne</strong> : seules les tables à deux bancs réservées « taverne » servent ses clients.</li>
+</ul>
+<h3>Attention</h3>
+<ul>
+<li><strong>Réserver une tente ne réserve pas ses lits.</strong> Choisissez les lits eux-mêmes (glisser un cadre sur la tente les prend tous). Seule la « Tente des hommes (4 lits) » est un seul objet avec ses lits.</li>
+<li>Un objet d'entraînement réservé ne sert plus aux hommes.</li>
+<li>Une copie perd sa réservation.</li>
+</ul>
+<hr>
+<h2 id="fr-ch6">6. L'entraînement</h2>
+<h3>Les zones</h3>
+<p>Au plan, <strong>clic droit › Les zones du camp</strong> : le briefing, les duels, l'entraînement, et la ronde des gardes. Le cercle suit la souris ; la molette change sa taille ; clic gauche pour poser, clic droit pour annuler.</p>
+<ul>
+<li><strong>La zone d'entraînement</strong> : là où se fait l'exercice du matin.</li>
+<li><strong>La zone des duels</strong> : là où se règlent les duels pour l'honneur.</li>
+<li><strong>La zone du briefing</strong> : là où le Directeur réunit ses hommes avant une mission.</li>
+<li><strong>La zone d'un râtelier d'entraînement</strong> : choisissez le râtelier, puis clic droit › Choisir la zone. Plus elle est grande, plus il y a de duos en même temps (de 1 à 6).</li>
+</ul>
+<h3>Ce qu'on y met</h3>
+<ul>
+<li><strong>Le râtelier d'entraînement</strong> (60 gros) : les duels à l'épée de bois. Un assaut rapporte <strong>12 points</strong>. C'est le seul râtelier qui donne des duels.</li>
+<li><strong>Le mannequin de paille</strong> (40 gros) : 120 secondes d'exercice, <strong>6 points</strong>, puis il attend 10 minutes.</li>
+<li><strong>La cible</strong> (40 gros) : pour les archers et les arbalétriers. Au plan, tirez le bout du trait vert pour placer le <strong>point de tir</strong> (de 2 à 150 m). Plus la cible est loin, plus le tir rapporte. Une cible par archer. Gardez le couloir libre : si quelqu'un passe derrière la cible, le tireur attend.</li>
+</ul>
+<h3>Quand</h3>
+<ul>
+<li><strong>L'exercice du matin</strong>, de 8 h à 12 h, pour tous ceux qui ne sont pas épuisés.</li>
+<li><strong>La veillée</strong>, de 19 h à 22 h, pour les volontaires.</li>
+<li>Le <strong>colonel</strong> dirige l'exercice ; sinon c'est le Directeur.</li>
+</ul>
+<h3>Ce que ça rapporte</h3>
+<ul>
+<li><strong>100 points = 1 niveau</strong>, jusqu'au niveau 30. Un homme arrive au niveau 6.</li>
+<li>Au <strong>niveau 10</strong>, il devient confirmé ; au <strong>niveau 20</strong>, vétéran. Son équipement suit son grade.</li>
+<li>Des primes d'exercice sont versées quand le coffre dépasse 10 000 gros.</li>
+</ul>
+<hr>
+<h2 id="fr-ch7">7. Les soldats</h2>
+<h3>Les engagements et les grades</h3>
+<div class="table"><table><thead><tr><th>Engagement</th><th>Prix</th><th>Force de départ</th></tr></thead><tbody><tr><td>Recrue (épée et bouclier, hache, masse, arme d'hast, épée longue…)</td><td>250</td><td>novice</td></tr><tr><td>Archer</td><td>450</td><td>novice (débutant)</td></tr><tr><td>Arbalétrier</td><td>570</td><td>novice (débutant)</td></tr></tbody></table></div>
+<p><strong>Tout homme entre au bas de l'échelle</strong>, au niveau 6, puis progresse par l'entraînement et les combats. Un fantassin devient <strong>confirmé</strong> au niveau 10 et <strong>vétéran</strong> au niveau 20. Les archers montent au tir : débutant, bon tireur, œil de lynx.</p>
+<p><strong>La tenue suit le rang</strong> : une recrue part avec peu d'armure, un vétéran avec une armure presque complète.</p>
+<h3>Un homme apte</h3>
+<p>Pour partir en mission, un homme doit avoir au moins le niveau 6, 50 d'énergie, 40 de moral, 80 de santé, et aucune pièce d'équipement sous 30 %. Il ne doit pas être de garde, puni, ni au bain.</p>
+<h3>L'énergie et le moral</h3>
+<ul>
+<li><strong>L'énergie</strong> baisse quand l'homme est éveillé ou qu'il travaille, et remonte assis, au lit ou pendant la sieste. Un homme qui rentre de mission est fatigué.</li>
+<li><strong>Le moral</strong> baisse avec la faim, la fatigue, la saleté, les blessures et les dettes. Il monte quand l'homme est bien nourri, reposé, quand il a de l'argent en poche et des primes. Les <strong>feux</strong> allumés, le <strong>jour de repos</strong> et la <strong>visite du colonel</strong> remontent le moral de toute la compagnie.</li>
+</ul>
+<h3>Le colonel</h3>
+<p>Il est nommé seul : c'est le meilleur de vos hommes. Il dirige l'exercice, inspecte le camp matin et soir, met les épuisés au lit et donne des amendes (bagarre, exercice manqué, garde ivre). Il ne part que sur les missions dures.</p>
+<h3>La paye</h3>
+<p>Les combattants n'ont pas de solde fixe : <strong>leur paye, ce sont 60 % de chaque mission</strong>, versés à 20 h. Les plus gradés touchent une part plus grosse.</p>
+<h3>Les morts</h3>
+<p>Un mort est remplacé par le Directeur, jusqu'à la taille de compagnie que vous avez choisie, s'il y a un lit libre et des vivres. Sa bourse est partagée entre ses camarades. La lettre de la semaine dit combien les remplacements ont coûté.</p>
+<hr>
+<h2 id="fr-ch8">8. Les missions et l'argent</h2>
+<h3>Comment une mission part</h3>
+<ul>
+<li>Le Directeur décide seul plusieurs fois par jour, de 7 h à 17 h. Vous pouvez aussi lui demander : <strong>« Trouve-nous une mission. »</strong></li>
+<li>Une troupe compte de <strong>4 à 12 hommes</strong>. Le <strong>tiers de la compagnie reste au camp</strong>.</li>
+<li>Il exige <strong>85 % de chances de gagner</strong> et au plus <strong>25 % de pertes</strong>. Il prend la plus petite troupe qui passe ce test.</li>
+<li>Les ennemis : pillards (les plus faibles), brigands, et hommes de Sigismond (les plus durs). Un camp faible, s'il ne trouve rien d'autre, a aussi de petites bandes de 2 ou 3 pillards.</li>
+<li><strong>Un jour sur cinq est jour de repos</strong> : pas de mission, mais du moral.</li>
+</ul>
+<h3>Pourquoi il répond « Rien de sûr »</h3>
+<ul>
+<li>Pas assez d'hommes aptes (fatigue, blessures, équipement usé, garde).</li>
+<li>Hommes trop faibles : entraînez-les. Un camp faible a aussi droit aux petites missions, quand aucune mission normale n'est possible.</li>
+<li>Vous pouvez aussi demander « Une mission plus difficile, mieux payée. » : il la prendra dès qu'il aura une équipe sûre.</li>
+</ul>
+<h3>Ce que rapporte une mission</h3>
+<ul>
+<li>La <strong>prime</strong> dépend du nombre et de la sorte d'ennemis, de la distance et du niveau de vos hommes.</li>
+<li>Le <strong>coffre du camp ennemi</strong> et ce qu'on trouve <strong>sur les corps</strong> s'y ajoutent.</li>
+<li>Au retour, on paie d'abord l'accueil des hommes (repas, chope, bain). Puis <strong>40 % vont au coffre</strong> et <strong>60 % aux soldats</strong>.</li>
+</ul>
+<h3>L'argent du camp</h3>
+<ul>
+<li><strong>Ce qui rentre</strong> : les missions (de loin la plus grosse part), les taxes des artisans, les amendes, le surplus revendu en ville.</li>
+<li><strong>Ce qui sort</strong> : les embauches, les constructions, les vivres achetés en ville, les primes.</li>
+<li><strong>Le 7e soir</strong>, la semaine se ferme : sur ce qui dépasse 10 000 gros, Henry reçoit sa part et le Directeur la sienne.</li>
+</ul>
+<h3>L'alerte rouge</h3>
+<p>Seul Henry la déclare, en parlant au Directeur. Le camp passe sur le pied de guerre : plus de missions, plus longtemps, avec moins de chances exigées (65 %) et plus de pertes admises (50 %). Les morts coûtent cher : gardez-la pour les grands besoins.</p>
+<hr>
+<h2 id="fr-ch9">9. Bien monter un artisan</h2>
+<h3>Les règles communes</h3>
+<ul>
+<li><strong>L'engagement</strong> : 5 000 gros (le palefrenier et l'aide du forgeron, 1 500), payés par le coffre, au menu <strong>U › Embauche</strong>.</li>
+<li><strong>Son poste</strong> : chaque artisan travaille à son établi ou à son étal. Posez-le d'abord (voir la liste ci-dessous).</li>
+<li><strong>Sa caisse</strong> : elle se pose seule, gratuite, à côté de son étal. Elle reçoit 200 gros de départ. L'artisan y paie ses matières et ses gens, et y met ses ventes. E sur la caisse pour la voir (avec le programme lancé).</li>
+<li><strong>Son premier stock</strong> est compris dans le prix d'engagement.</li>
+<li><strong>Son salaire</strong> est payé le 7e jour par sa caisse, jamais par le coffre.</li>
+<li><strong>Les taxes</strong> : le 7e jour, la caisse verse au coffre une part de ses gains et de ce qu'elle a en trop.</li>
+<li><strong>Le coursier</strong> fait le lien avec la ville : il achète ce qui manque aux ateliers.</li>
+<li><strong>Le Directeur</strong> fait chaque jour la tournée des caisses et signale celles qui sont vides ou endettées.</li>
+</ul>
+<h3>Ce qu'il faut à chacun</h3>
+<div class="table"><table><thead><tr><th>Artisan</th><th>Ce qu'il lui faut</th></tr></thead><tbody><tr><td>Forgeron</td><td>la forge, posée avec lui ; fer et charbon</td></tr><tr><td>Dames des bains</td><td>le comptoir des bains (facultatif) ; savon, eau, bois</td></tr><tr><td>Coursier</td><td>son pupitre</td></tr><tr><td>Chasseurs</td><td>le poste de chasse ; un étal pour vendre</td></tr><tr><td>Jardinier</td><td>l'étal du potager et au moins un potager</td></tr><tr><td>Porteur d'eau</td><td>la charrette à eau</td></tr><tr><td>Bûcheron</td><td>la réserve de bois de chauffe ; un étal pour vendre</td></tr><tr><td>Tavernier</td><td>son étal ; le tonneau de vin pour vendre du vin</td></tr><tr><td>Armurier</td><td>son atelier</td></tr><tr><td>Palefrenier</td><td>la ligne des chevaux</td></tr><tr><td>Vivandière</td><td>sa table</td></tr><tr><td>Boucher</td><td>le coin du boucher, et un fumoir</td></tr></tbody></table></div>
+<h3>Le bon ordre</h3>
+<ol>
+<li><strong>La forge</strong>, dès que l'équipement s'use : elle répare, et les hommes paient.</li>
+<li><strong>Les chasseurs ou le jardinier</strong> : les vivres ne s'achètent plus en ville.</li>
+<li><strong>Le porteur d'eau, le bûcheron, le coursier</strong> : ils font tourner les autres.</li>
+<li><strong>Le reste</strong> quand le coffre le permet.</li>
+</ol>
+<p>Réservez à chaque artisan <strong>son lit</strong> et <strong>son étal</strong> (chapitre 5), et donnez-lui sa tente à part des soldats.</p>
+<hr>
+<h2 id="fr-ch10">10. Les métiers et leurs chaînes</h2>
+<p>Les artisans travaillent les uns pour les autres. Chacun achète ses matières à un autre, et paie de sa caisse.</p>
+<ul>
+<li><strong>Les chasseurs</strong> rapportent la viande. Ils la vendent aux hommes et au <strong>boucher</strong> ; leurs peaux vont à la <strong>tannerie</strong>, qui fait le cuir de la forge et de l'armurier.</li>
+<li><strong>Le boucher</strong> sale la viande des chasseurs, puis la fume au fumoir : elle se garde.</li>
+<li><strong>Le jardinier</strong> cultive les potagers ; le <strong>porteur d'eau</strong> les arrose.</li>
+<li><strong>Le porteur d'eau</strong> fournit la boisson du camp et l'eau des bains.</li>
+<li><strong>Le bûcheron</strong> fournit le bois des feux et des bains, et le <strong>charbon de la forge</strong>.</li>
+<li><strong>La forge</strong> répare armes, armures et outils des autres métiers.</li>
+<li><strong>Le coursier</strong> achète en ville ce que le camp ne produit pas (sel, fer, savon, tonneaux, fourrage), et revend le surplus et le butin.</li>
+</ul>
+<p><strong>Le surplus</strong> : quand les réserves dépassent leur maximum, une partie se revend en ville, au prix auquel les marchands rachètent.</p>
+<hr>
+<h2 id="fr-ch11">11. Le dictionnaire du camp</h2>
+<p>Tout ce qui s'achète et se pose au camp, rangé par utilité (logement, repas, repos, feux, lumière, défense, entraînement, justice, soins, métiers, vente, chevaux, commandement, argent, rangement, abris, décor), avec son prix, son chemin dans le menu U et ce qu'il fait vraiment.</p>
+<p><em>(La table complète est fabriquée à partir du mod lui-même, et se met à jour avec chaque version.)</em></p>
+<p>Tout ce qui s'achète et s'installe au camp : sa catégorie d'utilité, comment l'installer, et pourquoi. Un objet sans effet de jeu est dit « Décor ». Les objets se posent et se paient au coffre du camp : Touche U › Aménagement du camp › Poser un objet (ou, au plan, clic droit › Poser un objet).</p>
+<h3>Logement</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Votre tente, vide (à aménager : votre lit, vos coffres…)</td><td>gratuit</td><td>U › … › Henry › Son logis</td><td>Votre tente, vide : vous y mettez votre lit et vos coffres. Le lit n'est pas réservé d'office : au plan, « Réservé à... » › Henry ; il devient alors votre lit (dormir, sauvegarder).</td></tr><tr><td>Tente des hommes (4 lits)</td><td>300 gros</td><td>U › … › Les hommes › Logement</td><td>Quatre lits bas sous une grande tente. Chaque lit loge un homme. Le Directeur ne réengage qu'avec un lit libre et 2 jours de vivres. Au lit, un homme reprend 12 d'énergie par heure. Un homme sans lit est pris en premier pour la garde de nuit. Deux lits à 4 m ou moins comptent comme une même tente : +1 de relation par nuit.</td></tr><tr><td>Lit bas</td><td>gratuit</td><td>U › … › Les hommes › Logement (ou Henry › Son lit)</td><td>Chaque lit loge un homme. Le Directeur ne réengage qu'avec un lit libre et 2 jours de vivres. Au lit, un homme reprend 12 d'énergie par heure. Un homme sans lit est pris en premier pour la garde de nuit. Deux lits à 4 m ou moins comptent comme une même tente : +1 de relation par nuit.</td></tr><tr><td>Lit haut</td><td>60 gros</td><td>U › … › Les hommes › Logement</td><td>Chaque lit loge un homme. Le Directeur ne réengage qu'avec un lit libre et 2 jours de vivres. Au lit, un homme reprend 12 d'énergie par heure. Un homme sans lit est pris en premier pour la garde de nuit. Deux lits à 4 m ou moins comptent comme une même tente : +1 de relation par nuit. Aucun effet de plus qu'un lit bas.</td></tr><tr><td>Lit double</td><td>120 gros</td><td>U › … › Les hommes › Logement</td><td>Deux lits en un. Chaque lit loge un homme. Le Directeur ne réengage qu'avec un lit libre et 2 jours de vivres. Au lit, un homme reprend 12 d'énergie par heure. Un homme sans lit est pris en premier pour la garde de nuit. Deux lits à 4 m ou moins comptent comme une même tente : +1 de relation par nuit.</td></tr><tr><td>Banc-lit</td><td>20 gros</td><td>U › … › Les hommes › Logement</td><td>Chaque lit loge un homme. Le Directeur ne réengage qu'avec un lit libre et 2 jours de vivres. Au lit, un homme reprend 12 d'énergie par heure. Un homme sans lit est pris en premier pour la garde de nuit. Deux lits à 4 m ou moins comptent comme une même tente : +1 de relation par nuit. Aucun effet de plus qu'un lit bas.</td></tr></tbody></table></div>
+<h3>Repas</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Feu de chambrée (foyer, chaudron et trois rondins)</td><td>60 gros</td><td>U › … › Les hommes › Repas (ou Feu et lumière › Feux)</td><td>Six places sur trois rondins : au repas, un homme dont le lit est à 14 m ou moins y reçoit sa place. Compte comme feu.</td></tr><tr><td>Table et deux bancs</td><td>60 gros</td><td>U › … › Les hommes › Repas</td><td>Au repas, les hommes qui mangent debout viennent s'y asseoir, 4 toutes les 10 s. Elle compte comme table pour la quête « Les premiers pas ». Elle sert aussi de table de dés, et peut être réservée à la taverne.</td></tr><tr><td>Table et un banc</td><td>45 gros</td><td>U › … › Les hommes › Repas</td><td>Au repas, les hommes qui mangent debout viennent s'y asseoir, 4 toutes les 10 s. Elle compte comme table pour la quête « Les premiers pas ».</td></tr><tr><td>Petite table et deux chaises</td><td>25 gros</td><td>U › … › Les hommes › Repas</td><td>Au repas, les hommes qui mangent debout viennent s'y asseoir, 4 toutes les 10 s. Elle compte comme table pour la quête « Les premiers pas ».</td></tr><tr><td>Petite table et un tabouret</td><td>20 gros</td><td>U › … › Les hommes › Repas</td><td>Au repas, les hommes qui mangent debout viennent s'y asseoir, 4 toutes les 10 s. Elle compte comme table pour la quête « Les premiers pas ». Elle sert aussi de table de dés.</td></tr><tr><td>Foyer de camp (chaudron, cuisine)</td><td>40 gros</td><td>U › … › Les hommes › Repas (ou Feu et lumière › Feux)</td><td>Réservé à Henry : il y mange au chaudron et y cuisine. Sinon, les hommes y touillent et y mangent debout. Compte comme feu pour la quête.</td></tr></tbody></table></div>
+<h3>Repos</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Banc (deux places)</td><td>15 gros</td><td>U › … › Les hommes › Sièges</td><td>Deux places. Un homme assis reprend 2 d'énergie par heure. Le colonel veut un siège par homme.</td></tr><tr><td>Banc (trois places)</td><td>25 gros</td><td>U › … › Les hommes › Sièges</td><td>Trois places. Un homme assis reprend 2 d'énergie par heure. Le colonel veut un siège par homme.</td></tr><tr><td>Banc haut</td><td>25 gros</td><td>U › … › Les hommes › Sièges</td><td>Deux places. Un homme assis reprend 2 d'énergie par heure. Le colonel veut un siège par homme.</td></tr><tr><td>Tabouret</td><td>5 gros</td><td>U › … › Les hommes › Sièges</td><td>Une place. Un homme assis reprend 2 d'énergie par heure. Le colonel veut un siège par homme.</td></tr><tr><td>Chaise basse</td><td>12 gros</td><td>U › … › Les hommes › Sièges</td><td>Une place. Un homme assis reprend 2 d'énergie par heure. Le colonel veut un siège par homme.</td></tr><tr><td>Chaise haute</td><td>18 gros</td><td>U › … › Les hommes › Sièges</td><td>Une place. Un homme assis reprend 2 d'énergie par heure. Le colonel veut un siège par homme.</td></tr></tbody></table></div>
+<h3>Feu et moral</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Feu de camp et ses 6 bûches</td><td>20 gros</td><td>U › … › Les hommes › Repas (ou Feu et lumière › Feux)</td><td>Le feu central du Directeur : 6 bûches pour s'asseoir ; il le recharge avec le bois du bûcheron (une brassée dure 2,5 h). Tous les feux allumés : +1 de moral par heure ; un feu froid : −1. Compte comme feu pour la quête « Les premiers pas ».</td></tr></tbody></table></div>
+<h3>Lumière</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Brasero (la corbeille à feu, allumée la nuit)</td><td>60 gros</td><td>U › … › Défense et exercice › Enceinte (ou Feu et lumière › Feux)</td><td>Un feu allumé de 20 h à 7 h. Compte comme feu pour la quête ; le Directeur ne le recharge pas, et il ne compte pas pour le moral.</td></tr><tr><td>Torche sur pied (allumée)</td><td>8 gros</td><td>U › … › Feu et lumière › Lumière</td><td>Une torche allumée jour et nuit. Lumière seulement.</td></tr><tr><td>Lanterne de table</td><td>15 gros</td><td>U › … › Feu et lumière › Lumière (ou Henry › Ses petits objets)</td><td>Lumière seulement ; elle se pose sur le dessus d'une table.</td></tr><tr><td>Grosse lampe à bougies</td><td>12 gros</td><td>U › … › Feu et lumière › Lumière (ou Henry › Ses petits objets)</td><td>Lumière seulement ; elle se pose sur le dessus d'une table.</td></tr></tbody></table></div>
+<h3>Défense</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Tour de guet (on y monte ; 2 archers à l'alerte)</td><td>800 gros</td><td>U › … › Défense et exercice › Guet</td><td>Une vraie tour où l'on monte : un archer y veille la nuit, deux à l'alerte.</td></tr><tr><td>Porte de palissade</td><td>1000 gros</td><td>U › … › Défense et exercice › Enceinte</td><td>Une porte du camp : le Directeur y met un garde, jour et nuit (3 postes de garde au plus).</td></tr></tbody></table></div>
+<h3>Entraînement</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Râtelier du camp (armes)</td><td>60 gros</td><td>U › … › Défense et exercice › Armes</td><td>Le point d'exercice du matin ; pas de duels (c'est le râtelier d'exercice qui les donne).</td></tr><tr><td>Mannequin de paille (entraînement)</td><td>40 gros</td><td>U › … › Défense et exercice › Entraînement</td><td>Un homme libre s'y exerce 120 s : +6 points de combat, puis 600 s de repos.</td></tr><tr><td>Râtelier d'entraînement</td><td>60 gros</td><td>U › … › Défense et exercice › Armes</td><td>Les duels à l'épée de bois, dans une zone de 5 m (1 à 6 duos) : un combat de 60 s donne +12 points de combat à un mercenaire (100 points = un niveau, jusqu'à 30) ; +1 point direct seulement à un homme hors du registre.</td></tr><tr><td>Cible de tir (arc ou arbalète)</td><td>40 gros</td><td>U › … › Défense et exercice › Entraînement</td><td>Le tir : chasseurs et archers y tirent depuis le point de tir que vous placez ; séance de 180 s, repos de 600 s ; plus la cible est loin, plus le tir rapporte (100 points = +1 niveau de tir) ; les flèches sont rendues.</td></tr></tbody></table></div>
+<h3>Justice</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Pilori (le Directeur y met les punis)</td><td>200 gros</td><td>U › … › Défense et exercice › Justice</td><td>Le Directeur y attache les bagarreurs (à la 3e bagarre), jour et nuit, sans lit ni repas : 4 h, +2 par bagarre, +3 par mauvaise semaine, +2 par pilori déjà fait, 24 h au plus. Trois piloris : renvoyé (sauf si la compagnie a moins de 20 hommes). Sans pilori, la peine attend.</td></tr></tbody></table></div>
+<h3>Équipement</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Meule à aiguiser (affûter ses armes)</td><td>120 gros</td><td>U › … › Défense et exercice › Armes</td><td>La meule du jeu : vous y ouvrez l'affûtage. Aucune règle du mod.</td></tr></tbody></table></div>
+<h3>Soins et hygiène</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Comptoir de la Dame des bains (on la paie ici)</td><td>300 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>La patronne des bains s'y tient, le client devant. Sans comptoir, les bains marchent pareil. Il faut les dames des bains (Embauche).</td></tr><tr><td>Baquet pour se laver</td><td>30 gros</td><td>U › … › Les hommes › Soins et prière</td><td>Henry s'y lave, seulement si l'objet est réservé à Henry (au plan : « Réservé à... », Henry). Les hommes ne s'y lavent pas (ils ont les baquets du camp).</td></tr><tr><td>Point d'eau (se laver, laver son linge)</td><td>40 gros</td><td>U › … › Les hommes › Soins et prière</td><td>Henry s'y lave (clic) et y lave son linge (appui long, avec un savon), seulement si l'objet est réservé à Henry (au plan : « Réservé à... », Henry).</td></tr></tbody></table></div>
+<h3>Piété</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Prie-Dieu (prier)</td><td>60 gros</td><td>U › … › Les hommes › Soins et prière (ou Henry › Ses petits objets)</td><td>Henry y prie (l'action du jeu), seulement si l'objet est réservé à Henry (au plan : « Réservé à... », Henry).</td></tr></tbody></table></div>
+<h3>Métiers</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Poste de chasse (l'établi des chasseurs)</td><td>80 gros</td><td>U › … › Les métiers › Ateliers</td><td>L'établi des chasseurs : ils y déposent le gibier ; il fait exister la tannerie et sa caisse (sans lui, pas de tannerie). Il faut les chasseurs (Embauche).</td></tr><tr><td>Coin du boucher (portique, cochon pendu, billot)</td><td>200 gros</td><td>U › … › Les métiers › Cuisine</td><td>L'établi du boucher : il y découpe et sale la viande. Sans lui, il n'achète pas la viande des chasseurs (14 gros l'unité ; un sac de sel à 12 gros sale 4 unités, 2 jours). Il faut le boucher (Embauche). Un seul.</td></tr><tr><td>Étal du potager (l'établi du jardinier)</td><td>80 gros</td><td>U › … › Les métiers › Ateliers</td><td>L'établi du jardinier : la récolte y est portée (sans lui, il se tient au centre du camp). Il faut le jardinier (Embauche).</td></tr><tr><td>Pupitre du coursier (il y attend les commandes)</td><td>120 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>Le coursier y attend ses courses ; le forgeron vient y passer commande. Aucun chiffre n'en dépend. Il faut le coursier (Embauche). Un seul.</td></tr><tr><td>Fumoir (fumer la viande)</td><td>150 gros</td><td>U › … › Les métiers › Ateliers</td><td>Le boucher y fume sa viande salée (1 jour) : sans fumoir, pas de viande salée. Réservé à Henry, il peut aussi y fumer.</td></tr><tr><td>Petit potager (3,5 × 3,5 m)</td><td>80 gros</td><td>U › … › Les métiers › Potagers</td><td>9,7 m² de terre : environ 10 vivres par récolte (1 vivre par m², après 3 jours ; un jour sans entretien réduit la récolte). Sans potager, le jardinier n'a rien à faire.</td></tr><tr><td>Potager moyen (5 × 5 m)</td><td>160 gros</td><td>U › … › Les métiers › Potagers</td><td>21,9 m² de terre : environ 22 vivres par récolte.</td></tr><tr><td>Grand potager (7 × 7 m), avec son épouvantail</td><td>300 gros</td><td>U › … › Les métiers › Potagers</td><td>38,9 m² de terre : environ 39 vivres par récolte.</td></tr><tr><td>Atelier de l'armurier (petite forge de camp)</td><td>600 gros</td><td>U › … › Les métiers › Ateliers</td><td>L'établi de l'armurier : sans lui, ni réparation ni fabrication d'armures par l'armurier. Il faut l'armurier (Embauche). Un seul.</td></tr><tr><td>Charrette à eau</td><td>300 gros</td><td>U › … › Les métiers › Ateliers</td><td>L'établi du porteur d'eau : il y vend le verre d'eau, environ 0,11 gros (le huitième d'une tournée au prix au coût, revu chaque semaine) ; sans elle, pas de vente d'eau. Il faut le porteur d'eau (Embauche).</td></tr><tr><td>Réserve de bois de chauffe</td><td>150 gros</td><td>U › … › Les métiers › Ateliers</td><td>L'établi du bûcheron : sans lui, pas de coupe d'arbres près du camp. Il faut le bûcheron (Embauche).</td></tr></tbody></table></div>
+<h3>Vente</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Table de la vivandière (sa charrette, son poulailler et sa poule, en-cas aux hommes)</td><td>250 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>La vivandière y vend ses en-cas (3 gros, 2 par homme et par jour), payés à SA caisse, qui rembourse au coffre les vivres pris aux réserves ; sans table, ni vente ni poules. Il faut la vivandière (Embauche). Un seul.</td></tr><tr><td>Étal du jardinier (vente des légumes)</td><td>100 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>Le jardinier y vend les repas aux hommes et les légumes aux gens de passage (de 10 h à 12 h et de 14 h à 18 h), seulement s'il est derrière l'étal.</td></tr><tr><td>Étal du bûcheron (vente du bois, des branches et du charbon)</td><td>100 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>Le bûcheron y vend son bois ; la forge y achète son charbon, une fois par jour. Il faut le bûcheron (Embauche). Un seul.</td></tr><tr><td>Étal des chasseurs (vente du gibier et des peaux)</td><td>100 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>Les chasseurs y vendent la viande aux hommes et aux gens de passage. Il faut les chasseurs (Embauche).</td></tr><tr><td>Étal du tavernier (bière et vin au verre)</td><td>250 gros</td><td>U › … › Les métiers › Étals des marchands</td><td>Le tavernier y vend la bière et le vin, à 2,2 et 4,0 gros au départ, revus chaque semaine (entre la moitié et le double) ; 3 verres par homme et par jour (11 h 30-14 h et 17 h 30-23 h). Sans cet étal, aucune vente. Il faut le tavernier (Embauche). Un seul.</td></tr><tr><td>Tonneau de vin (on s'y sert)</td><td>150 gros</td><td>U › … › Les métiers › Taverne et boisson</td><td>Sans lui, la taverne ne vend pas de vin. Réservé à Henry, il y boit ; sinon, les hommes y font semblant de boire.</td></tr><tr><td>Tonneau de bière sur souche</td><td>100 gros</td><td>U › … › Les métiers › Taverne et boisson</td><td>Un client sans place à table y tire sa bière ; la bière se vend aussi sans lui.</td></tr></tbody></table></div>
+<h3>Cuisine</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Séchoir (sécher viande, fruits, herbes)</td><td>100 gros</td><td>U › … › Les métiers › Ateliers</td><td>Henry y sèche viande, fruits et herbes, seulement si l'objet est réservé à Henry (au plan : « Réservé à... », Henry). (La tannerie a son propre séchoir.)</td></tr></tbody></table></div>
+<h3>Chevaux</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Ligne des chevaux (deux places, foin, seaux)</td><td>300 gros</td><td>U › … › Chevaux et bêtes (ou Les métiers › Ateliers)</td><td>Deux places de cheval (un cheval s'achète 700 gros, seulement s'il reste une place) ; le palefrenier y travaille ; chaque cheval mange 1 ration de fourrage par jour, et coûte 8 gros de pension par semaine. Les sorties se font déjà à cheval (au-delà de 60 m du centre du camp, chaque sortant reçoit une monture), mais pas avec les chevaux achetés : ceux-ci restent à la ligne des chevaux.</td></tr></tbody></table></div>
+<h3>Commandement</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Tente miniature (E : la Gestion du camp)</td><td>gratuit</td><td>U › … › Henry › Ses petits objets</td><td>Touche E : la Gestion du camp. Posée par vous, elle remplace celle posée d'office.</td></tr><tr><td>Tente du Directeur (son lit, réservé à lui)</td><td>gratuit</td><td>U › … › Les métiers › Commandement</td><td>Le lit du Directeur, qui y dort la nuit. Elle se pose seule à son engagement ; seulement s'il est engagé.</td></tr><tr><td>Bureau du Directeur (il y travaille entre ses tournées)</td><td>400 gros</td><td>U › … › Les métiers › Commandement</td><td>Le Directeur s'y assied entre ses tournées ; ses rapports de vol ou de pillage y sont posés (E pour lire). Un seul.</td></tr></tbody></table></div>
+<h3>Argent</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Coffret de la banque (E : la Banque ; maintenir E : Scriptorium)</td><td>gratuit</td><td>U › … › Henry › Ses coffres</td><td>Touche E : la Banque du camp ; E maintenu : Scriptorium. Il remplace le coffret posé d'office. Les pillards le visent : 15 % du coffre, 150 gros au plus.</td></tr><tr><td>Caisse d'atelier (à réserver à un métier)</td><td>gratuit</td><td>U › … › Les métiers › Ateliers</td><td>La caisse d'un métier (E : son argent ; vous y prenez ou y donnez). Elle se pose seule, gratuite, à côté d'un étal ou d'un établi. Fonds de 200 gros pour la forge et l'armurier, 100 pour les autres.</td></tr></tbody></table></div>
+<h3>Rangement</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Coffre (garde ce qu'on y met)</td><td>50 gros</td><td>U › … › Henry › Ses coffres</td><td>Un coffre du jeu, sauvegardé avec la partie : ce qu'on y met reste. Vidé dans votre sac à la vente du camp. (L'argent du « coffre du camp » est ailleurs : la Banque.)</td></tr></tbody></table></div>
+<h3>Abri</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Petite tente</td><td>120 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Petite tente verte</td><td>140 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Petite tente rouge</td><td>140 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Petite tente (autre forme)</td><td>140 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente de forêt A</td><td>180 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente de forêt B</td><td>180 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente de forêt C</td><td>180 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente rustique</td><td>100 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente usée</td><td>80 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente coumane</td><td>400 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente ronde (celle d'Henry)</td><td>250 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente ronde, couleur 1</td><td>250 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente ronde, couleur 2</td><td>250 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente carrée</td><td>300 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente carrée verte (service)</td><td>320 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente carrée B</td><td>320 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grande tente carrée C</td><td>320 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Yourte</td><td>600 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente de seigneur</td><td>900 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente de seigneur, ouverte</td><td>900 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente royale</td><td>2000 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Tente royale, ouverte</td><td>2000 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Auvent de forêt</td><td>60 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Grand auvent</td><td>150 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr><tr><td>Abri de forêt</td><td>50 gros</td><td>U › … › Tentes et abris</td><td>Un abri, sans lit ni siège : les lits se posent dedans. Aucun autre effet.</td></tr></tbody></table></div>
+<h3>Mise en scène</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Coin cuisine</td><td>200 gros</td><td>U › … › Les métiers › Cuisine</td><td>Les hommes y font semblant de cuisiner ; aucun repas n'y est servi.</td></tr><tr><td>Coin cuisine avec étagères</td><td>250 gros</td><td>U › … › Les métiers › Cuisine</td><td>Les hommes y font semblant de cuisiner ; aucun repas n'y est servi.</td></tr><tr><td>Table à boire</td><td>60 gros</td><td>U › … › Les métiers › Taverne et boisson</td><td>Deux hommes y font semblant de boire. Aucun autre effet.</td></tr></tbody></table></div>
+<h3>Décor</h3>
+<div class="table"><table><thead><tr><th>Objet</th><th>Prix</th><th>Où</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Palissade, un pan (8 m)</td><td>400 gros</td><td>U › … › Défense et exercice › Enceinte</td><td>Décor : aucun effet de jeu (elle suit seulement la pente).</td></tr><tr><td>Abreuvoir des chevaux</td><td>60 gros</td><td>U › … › Chevaux et bêtes</td><td>Décor : aucun effet de jeu (les chevaux n'y sont pas conduits).</td></tr><tr><td>Chariot couvert</td><td>300 gros</td><td>U › … › Chevaux et bêtes</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Chariot couvert à bancs</td><td>300 gros</td><td>U › … › Chevaux et bêtes</td><td>Décor : aucun effet de jeu (pas de places assises).</td></tr><tr><td>Chariot de foin</td><td>300 gros</td><td>U › … › Chevaux et bêtes</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Chevaux de frise (pieux, 3 m)</td><td>100 gros</td><td>U › … › Défense et exercice › Enceinte</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Bannière (la flamme rouge à couronne du jeu)</td><td>150 gros</td><td>U › … › Les métiers › Commandement</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Pavois peint</td><td>40 gros</td><td>U › … › Défense et exercice › Enceinte</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Pavois, second modèle</td><td>40 gros</td><td>U › … › Défense et exercice › Enceinte</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Pavois sur son pied</td><td>40 gros</td><td>U › … › Défense et exercice › Enceinte</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Latrines de camp (à 20 m au moins des tentes, des feux et de la cuisine)</td><td>60 gros</td><td>U › … › Les hommes › Soins et prière</td><td>Décor : aucun effet de jeu. Seule règle : à 20 m au moins d'une tente, d'un feu ou de la cuisine.</td></tr><tr><td>Table avec vaisselle et lampe</td><td>80 gros</td><td>U › … › Les métiers › Cuisine</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Râtelier de la garde</td><td>120 gros</td><td>U › … › Défense et exercice › Armes</td><td>Décor : aucun effet de jeu (ses armes ne sont pas ramassées comme butin).</td></tr><tr><td>Hallebardes dans un tonneau</td><td>150 gros</td><td>U › … › Défense et exercice › Armes</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Haches dans une caisse</td><td>120 gros</td><td>U › … › Défense et exercice › Armes</td><td>Décor : aucun effet de jeu.</td></tr><tr><td>Porte-armure (l'armurier y montre son travail)</td><td>150 gros</td><td>U › … › Les métiers › Ateliers</td><td>Décor : aucun lien avec l'armurier ; les pièces posées dessus ne sont pas ramassées.</td></tr></tbody></table></div>
+<p>Et les 57 pièces du « Décor du jeu » (U › … › Décor › Caisses, Tonneaux et sacs, Paniers, Marchandises et réserves, Tables encombrées, Linge et fourrures) : décor, aucun effet de jeu, 25 gros la pièce sauf prix propre. Les coins cuisine, le tonneau de bière et la table à boire du décor n'ont pas l'effet de leurs versions hors décor.</p>
+<h3>L'embauche des hommes</h3>
+<p>Touche U › Embauche › Fantassins (Recrue, puis le style d'armes et le nombre) ou Archers et arbalétriers. Programme : Les hommes › Engager. Payés par la caisse du camp. Le Directeur paie les mêmes prix quand il remplace les morts, jusqu'à la taille de la compagnie (Embauche › Taille de la compagnie).</p>
+<p>On n'engage que des novices, tous au premier grade (JoVenGer, 10/11) : ni confirmé ni vétéran. Chacun monte en s'entraînant : sous le niveau 10, recrue (tireur : débutant) ; de 10 à 19, confirmé (bon tireur) ; dès 20, vétéran (œil de lynx). Un confirmé ou un vétéran engagé avant la 2.1.0 garde son rang.</p>
+<div class="table"><table><thead><tr><th>Homme</th><th>Prix</th><th>Ce qu'il est</th></tr></thead><tbody><tr><td>Recrue</td><td>250 gros</td><td>Un fantassin au premier grade, dans le style d'armes choisi (au hasard, épée et bouclier, hache et bouclier, épée longue, masse et bouclier, hache, armes d'hast). Il monte en s'entraînant.</td></tr><tr><td>Archer</td><td>450 gros</td><td>La recrue et l'arc du premier grade (bow_b, 200 gros au prix du jeu), au premier grade (Débutant). Il monte sur son niveau de tir.</td></tr><tr><td>Arbalétrier</td><td>570 gros</td><td>La recrue et la vieille arbalète de chasse (crossbowLightCheap01, 320 gros au prix du jeu), au premier grade ; ses carreaux sont pris au stock du camp et payés à part.</td></tr></tbody></table></div>
+<h3>Les métiers et services</h3>
+<p>Touche U › Embauche › Le service › le métier › Engager ce métier : Oui, l'engager. Payés par la caisse du camp, sans remboursement. Programme : Les artisans › Engager ou renvoyer.</p>
+<div class="table"><table><thead><tr><th>Métier</th><th>Prix</th><th>Ce qu'il fait</th><th>Ce qu'il lui faut pour travailler</th></tr></thead><tbody><tr><td>Le Directeur</td><td>compris dans la patente</td><td>Mène le camp : engage, paie, nourrit, trouve les missions ; pose sa tente et son lit dès son engagement.</td><td>le camp et votre tente posés</td></tr><tr><td>Les dames des bains</td><td>5000 gros</td><td>Lavent le corps et les vêtements des hommes ; le bain d'un homme coûte environ 10 gros (5,10 au prix au coût, revu chaque semaine, plus le savon), payés à leur caisse.</td><td>« Comptoir de la Dame des bains (on la paie ici) »</td></tr><tr><td>Le forgeron</td><td>5000 gros</td><td>Répare les pièces abîmées (une mission ne prend pas un homme dont une pièce est sous 30 %).</td><td>la forge (posée avec le forgeron)</td></tr><tr><td>L'aide du forgeron</td><td>1500 gros</td><td>Petites réparations ; c'est le forgeron qui l'engage.</td><td>la forge (posée avec le forgeron)</td></tr><tr><td>Le coursier</td><td>5000 gros</td><td>Courses à cheval : il livre les réserves, payées par le coffre.</td><td>« Pupitre du coursier (il y attend les commandes) »</td></tr><tr><td>Les deux chasseurs</td><td>5000 gros</td><td>Le gibier du secteur.</td><td>« Poste de chasse (l'établi des chasseurs) »</td></tr><tr><td>Le jardinier</td><td>5000 gros</td><td>Travaille les potagers.</td><td>« Étal du potager (l'établi du jardinier) » ; un potager (petit, moyen ou grand)</td></tr><tr><td>Le porteur d'eau</td><td>5000 gros</td><td>Va au puits ; vend le verre d'eau.</td><td>« Charrette à eau »</td></tr><tr><td>Le bûcheron et son aide</td><td>5000 gros</td><td>Bois de chauffe pour les feux, charbon pour la forge.</td><td>« Réserve de bois de chauffe »</td></tr><tr><td>Le tavernier</td><td>5000 gros</td><td>Bière et vin au verre.</td><td>« Étal du tavernier (bière et vin au verre) » ; « Tonneau de vin (on s'y sert) »</td></tr><tr><td>L'armurier</td><td>5000 gros</td><td>Répare et ajuste les armures, fabrique des pièces simples.</td><td>« Atelier de l'armurier (petite forge de camp) »</td></tr><tr><td>Le palefrenier</td><td>1500 gros</td><td>Panse les chevaux.</td><td>« Ligne des chevaux (deux places, foin, seaux) »</td></tr><tr><td>La vivandière</td><td>5000 gros</td><td>Vend des en-cas aux hommes (3 gros), payés à sa caisse ; elle rembourse au coffre les vivres pris ; ses poules pondent.</td><td>« Table de la vivandière (sa charrette, son poulailler et sa poule, en-cas aux hommes) »</td></tr><tr><td>Le boucher</td><td>5000 gros</td><td>Achète la viande des chasseurs et la sale ; la fume au fumoir.</td><td>« Coin du boucher (portique, cochon pendu, billot) » ; « Fumoir (fumer la viande) »</td></tr></tbody></table></div>
+<h3>Les installations et l'atelier d'alchimie</h3>
+<p>Touche U › Aménagement du camp › Constructions du camp › l'installation › Acheter et poser (coffre du camp). Programme : Construire › Les constructions. (La tour d'archers, la charrette d'archers, la palissade et la porte de cette page n'apparaissent pas en jeu : le mod n'a pas leur fonction de pose.)</p>
+<div class="table"><table><thead><tr><th>Installation</th><th>Prix</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Arène</td><td>1200 gros</td><td>Décor : aucun effet de jeu ; personne n'y est envoyé (les duels se font aux râteliers).</td></tr><tr><td>Terrain d'entraînement</td><td>400 gros</td><td>Mise en scène : deux hommes y font l'exercice à l'épée ; aucun gain.</td></tr><tr><td>Établi à flèches</td><td>300 gros</td><td>Mise en scène : un homme y répare des flèches ; aucune flèche n'est fabriquée.</td></tr><tr><td>Coin cuisine</td><td>200 gros</td><td>Mise en scène : quatre places où les hommes touillent et mangent ; aucun repas n'est compté.</td></tr><tr><td>Tonneau de vin</td><td>150 gros</td><td>Mise en scène : un homme y fait semblant de boire ; aucun effet.</td></tr><tr><td>Banc du camp</td><td>60 gros</td><td>Mise en scène : deux hommes y somnolent ; aucun repos n'est compté.</td></tr><tr><td>Bassines</td><td>60 gros</td><td>Hygiène : deux bassines ; les hommes sales y vont se laver, un à la fois par bassine.</td></tr><tr><td>Feuillée</td><td>40 gros</td><td>Mise en scène : un homme s'y tient 45 s ; aucun besoin lié.</td></tr><tr><td>Atelier d'alchimie</td><td>3000 gros</td><td>Décor : aucun effet de jeu ; le camp se rebâtit au même endroit pour l'accueillir.</td></tr></tbody></table></div>
+<h3>Le camp de 1403 : les ajouts à acheter</h3>
+<p>Touche U › Aménagement du camp › Constructions du camp › Le camp de 1403 : les ajouts à acheter › Acheter (coffre du camp). Programme : Construire › Les constructions.</p>
+<div class="table"><table><thead><tr><th>Ajout</th><th>Prix</th><th>Pourquoi</th></tr></thead><tbody><tr><td>Agrandir les bains</td><td>600 gros</td><td>L'abri des bains 1,15 fois plus grand et deux cuves de plus (4 et 5), si la place est libre.</td></tr><tr><td>La table et le tabouret du coursier</td><td>25 gros</td><td>Une petite table et un tabouret au pupitre du coursier (mise en scène).</td></tr><tr><td>Un cheval</td><td>700 gros</td><td>Une bête à une place libre de la ligne des chevaux ; le palefrenier la soigne. Les sorties se font déjà à cheval (au-delà de 60 m du centre du camp, chaque sortant reçoit une monture), mais pas avec les chevaux achetés : ceux-ci restent à la ligne des chevaux.</td></tr></tbody></table></div>
+<hr>
+<h2 id="fr-ch12">12. Les touches</h2>
+<div class="table"><table><thead><tr><th>Touche</th><th>Où</th><th>Ce qu'elle fait</th></tr></thead><tbody><tr><td><strong>U</strong></td><td>partout</td><td>ouvre et ferme le menu du camp</td></tr><tr><td><strong>H</strong></td><td>partout</td><td>ouvre et ferme le programme « Gestion du camp » (s'il est lancé)</td></tr><tr><td><strong>E</strong></td><td>sur un objet</td><td>l'utiliser (coffret de la banque, tente miniature, caisse, lettre…)</td></tr><tr><td><strong>T</strong></td><td>dans le plan</td><td>cacher ou montrer les tentes</td></tr><tr><td><strong>Z</strong></td><td>dans le plan</td><td>annuler la dernière action</td></tr><tr><td><strong>Échap</strong></td><td>dans le plan</td><td>sortir du plan</td></tr><tr><td>Molette</td><td>dans le plan</td><td>tourner l'objet choisi, ou zoomer</td></tr></tbody></table></div>
+<hr>
+<h2 id="fr-ch13">13. Les pièges à éviter</h2>
+<ol>
+<li><strong>Trop de lits</strong> : chaque lit libre est rempli par le Directeur. Posez les lits au fur et à mesure, et réglez la taille de la compagnie.</li>
+<li><strong>Le coffre sous 10 000 gros</strong> : primes et parts attendent. Déposez de l'argent.</li>
+<li><strong>Retirer ne rembourse pas</strong> : seul Z, plan ouvert, rend l'argent.</li>
+<li><strong>Réserver une tente ne réserve pas ses lits.</strong></li>
+<li><strong>Un artisan sans lit réservé</strong> prend celui d'un soldat.</li>
+<li><strong>« Votre tente, vide »</strong> (une seconde tente pour Henry, à aménager) : réservez-vous au plan le lit que vous y posez, sinon il ira à vos hommes. La tente offerte à la fondation, elle, est déjà à vous.</li>
+<li><strong>T n'ouvre pas le plan</strong> : passez par U › Aménagement du camp › Le plan du camp.</li>
+<li><strong>Le plan se ferme seul</strong> après deux minutes sans rien faire.</li>
+<li><strong>Le décor ne rapporte rien</strong> : achetez-le quand le camp gagne de l'argent.</li>
+<li><strong>L'alerte rouge</strong> fait partir plus de troupes, mais elle coûte des hommes.</li>
+</ol>
+<hr>
+<p><em>Scriptorium est un mod de JoVenGer. Il ne remplace aucun fichier du jeu et ne gêne en rien le jeu de base.</em></p></div></div><div data-langue="en"><div class="carte vedette">
+<p>With Scriptorium, Henry founds and leads his own company of mercenaries. He buys a charter, pitches his camp wherever he likes, hires soldiers and craftsmen, then makes them live, train and go on missions. This guide explains everything, in order, so you get off to a good start, even with little money.</p></div><nav class="carte sommaire"><h3>Contents</h3><ol><li><a href="#en-ch1">A good start, with little money</a></li><li><a href="#en-ch2">The U menu, the program and the Director</a></li><li><a href="#en-ch3">Building is free</a></li><li><a href="#en-ch4">Tents and beds</a></li><li><a href="#en-ch5">Reservations</a></li><li><a href="#en-ch6">Training</a></li><li><a href="#en-ch7">The soldiers</a></li><li><a href="#en-ch8">Missions and money</a></li><li><a href="#en-ch9">Setting up a craftsman</a></li><li><a href="#en-ch10">The trades and their chains</a></li><li><a href="#en-ch11">The camp dictionary</a></li><li><a href="#en-ch12">The keys</a></li><li><a href="#en-ch13">Pitfalls to avoid</a></li></ol></nav><div class="carte"><h2 id="en-ch1">1. A good start, with little money</h2>
+<p>The camp costs a lot at first and pays off later. The secret: go step by step, and buy nothing before you need it. The quest "The company's first steps" guides you step by step; this chapter also tells you why.</p>
+<h3>Step 1 — The charter (30,000 groschen)</h3>
+<ul>
+<li>Without a charter, you cannot found a camp.</li>
+<li>The notary sells it in <strong>Kuttenberg</strong> (under a large tent, at the foot of the town hall tower, on the square) or in <strong>Troskowitz</strong> (in the town hall courtyard).</li>
+<li>Press <strong>E</strong> on his desk, or talk to him.</li>
+<li>It costs <strong>30,000 groschen</strong>, taken from Henry's purse: 20,000 pay for the licence, and <strong>10,000 go into the camp chest</strong>. These 10,000 groschen are your starting funds.</li>
+<li>Later, the same notary will buy the camp back if you want to sell it.</li>
+</ul>
+<h3>Step 2 — Choosing the spot and pitching your tent</h3>
+<ul>
+<li>Choose <strong>flat</strong> ground: an object cannot be placed on a slope steeper than 20°.</li>
+<li>Prefer a spot where <strong>the grass is short</strong>: the game's grass pokes through tents. There is also an option "Bare ground around the camp" (U menu, Camp Layout).</li>
+<li>Face the direction you want the camp to have: it follows your gaze.</li>
+<li><strong>U menu › Camp Layout › Pitch my tent here: found the camp</strong>.</li>
+<li>Your tent is a gift: a large square tent, a high bed and a chest. The <strong>Bank strongbox</strong> (E: the Bank) and the <strong>Miniature tent</strong> (E: camp management) are placed with it.</li>
+</ul>
+<h3>Step 3 — Hiring the Director (free)</h3>
+<ul>
+<li><strong>U menu › Hiring › The service › The Director</strong>. He is included in the charter.</li>
+<li>He places his two tents, his desk and his bed by himself.</li>
+<li>He keeps the accounts, finds missions, replaces the dead, refuels the fires and watches over the tills. Talk to him often.</li>
+</ul>
+<h3>Step 4 — Keeping the chest above 10,000 groschen</h3>
+<ul>
+<li>Below <strong>10,000 groschen</strong>, the camp saves: no share for Henry or the Director, and the men's bonuses wait.</li>
+<li>Deposit money through the Director ("The chest.") or in the U menu, Bank page.</li>
+<li>It is not lost: each of Henry's deposits is a debt the camp owes him. Every week, the bank returns half of what is above 12,000 groschen.</li>
+</ul>
+<h3>Step 5 — Beds, a table and a fire, no more</h3>
+<ul>
+<li>Place <strong>one bed for each man you want to hire</strong>, no more. The <strong>Low bed</strong> is free. The <strong>Men's tent</strong> (300 groschen) already holds 4 beds.</li>
+<li>Place a <strong>table</strong> (a small table and a stool cost 20 groschen) and a <strong>campfire</strong> (20 groschen). Without seats, the men eat standing up.</li>
+<li>Set the <strong>company size</strong> (U menu and the program): the Director replaces the dead up to that size, and never beyond. He also needs a free bed and two days of food.</li>
+</ul>
+<h3>Step 6 — Hiring the first men</h3>
+<ul>
+<li><strong>U menu › Hiring</strong>: choose the weapon style and the number (1, 3, 5 or 10).</li>
+<li>Prices: recruit 250 groschen, archer 450, crossbowman 570 (the recruit plus his ranged weapon). All of them join as novices.</li>
+<li><strong>Every man starts at the bottom of the ladder</strong>, at level 6, and rises by training and fighting: he becomes seasoned at level 10, then a veteran at level 20.</li>
+<li>Start with <strong>8 men</strong>. In a small camp, only one man in four is on guard: with 8 men, 6 can go on missions.</li>
+</ul>
+<h3>Step 7 — Training is almost free</h3>
+<ul>
+<li>The <strong>morning drill</strong> (8 am to noon) is compulsory for everyone.</li>
+<li>A <strong>Training weapon rack</strong> (60 groschen) allows wooden-sword duels, a <strong>Straw dummy</strong> (40 groschen) solo practice, an <strong>Archery target</strong> (40 groschen) shooting. See chapter 6.</li>
+<li>A man who reaches <strong>level 10</strong> becomes seasoned and fights better.</li>
+</ul>
+<h3>Step 8 — The forge, when equipment wears out (5,000 groschen)</h3>
+<ul>
+<li>A man with a piece of equipment <strong>below 30%</strong> no longer goes on missions.</li>
+<li>The <strong>blacksmith</strong> repairs: the man pays from his purse, on credit if he has nothing. The forge is the first craftsman to hire.</li>
+</ul>
+<h3>Step 9 — The first mission</h3>
+<ul>
+<li>Talk to the Director: <strong>"The missions." › "Find us a mission."</strong></li>
+<li>If he answers "Nothing certain for now", your men are not ready yet: see chapter 8.</li>
+<li>When he finds no regular mission suited to a weak camp, he takes a <strong>small band of 2 or 3 marauders</strong>. It pays less, but it is safer, and the men improve.</li>
+</ul>
+<h3>Then, in this order</h3>
+<ol>
+<li><strong>Food</strong>: the hunters, or the gardener with a vegetable patch. The chest then stops buying food in town, at 20 groschen a unit.</li>
+<li><strong>Drink and wood</strong>: the water carrier (drink is never bought in town), then the woodcutter (firewood, charcoal for the forge).</li>
+<li><strong>The courier</strong>: he buys in town what is missing and sells the loot.</li>
+<li><strong>Later</strong>: the armourer, the baths, the tavern, the sutler, the butcher, the groom and the horses.</li>
+<li><strong>Decoration</strong>, last: it looks good, but it earns nothing.</li>
+</ol>
+<blockquote><strong>If the chest drops too low</strong>: ask the Director "The major measures." › "Tighten spending.". He stops replacing men and cuts purchases.</blockquote>
+<hr>
+<h2 id="en-ch2">2. The U menu, the program and the Director</h2>
+<p>The camp is managed in three ways, all acting on the same camp and the same chest.</p>
+<ul>
+<li><strong>The U key</strong>: the in-game menu. U opens and closes it (Esc does not close it). Right after loading, wait a few seconds before pressing it.</li>
+<li><strong>The H key</strong>: the "Gestion du camp" program (camp management), a separate window in front of the game. It must be installed and running; without it, H does nothing and U still works.</li>
+<li><strong>The Director</strong>: talk to him. His topics: "How fares the camp?", "The missions.", "What do you advise?", "Any offences today?", "The chest.", "The major measures.".</li>
+</ul>
+<p><strong>The Director's letter</strong>: every week, he writes to you. It is read in the U menu: the chest, income, expenses, profit, missions won, the dead and what they cost. He proposes three measures, and you choose one.</p>
+<hr>
+<h2 id="en-ch3">3. Building is free</h2>
+<p><strong>Nothing places itself</strong>: tents, beds, tables, work posts — you place them, wherever you like. Your camp can be a small bivouac or a true town of canvas.</p>
+<h3>Placing an object from the U menu</h3>
+<ul>
+<li><strong>U menu › Camp Layout › Place an object</strong>, then choose from the catalogue.</li>
+<li>The object appears 4 m in front of Henry. <strong>It is paid on the click</strong>, without confirmation.</li>
+<li>Its page offers: turn by 45° or 15°, move forward or back by one metre, "This is the spot", and "Remove this object".</li>
+<li><strong>Moving is free. Removing does not refund.</strong></li>
+</ul>
+<h3>The camp plan (top view)</h3>
+<ul>
+<li><strong>U menu › Camp Layout › The camp plan.</strong> Henry stays still meanwhile.</li>
+<li><strong>Left click</strong> on an object: select it. <strong>Drag</strong> an object: move it. <strong>Drag in empty space</strong>: select a whole group.</li>
+<li><strong>Mouse wheel</strong> on a selected object: turn it. Wheel elsewhere: zoom. <strong>Right-click drag</strong>: move the view.</li>
+<li><strong>Right click</strong> without moving: the plan menu (move, copy, paste, reserve, place an object at this spot, the zones, the view, leave).</li>
+<li><strong>T</strong>: hide or show the tents, to see the beds inside. <strong>Z</strong>: undo the last action. <strong>Esc</strong>: leave the plan.</li>
+<li>A visible tent carries along what it contains. A stall carries its till.</li>
+<li><strong>Undo (Z)</strong> refunds a placement or brings back a removed object, but only while the plan is open.</li>
+<li>Copies are paid. Some unique objects cannot be copied (your tent, the Director and his desk, the Bank strongbox…).</li>
+</ul>
+<h3>Placement rules</h3>
+<ul>
+<li>No slope steeper than 20°.</li>
+<li><strong>Latrines</strong> must be at least 20 m from a tent, a fire or the kitchen.</li>
+<li>Single-craftsman posts (tavern stall, bath counter, armourer's forge…) can only be placed once.</li>
+<li>The camp chest must cover the price.</li>
+<li>You can walk through furniture: only your tent and the watchtower are solid.</li>
+<li>A chest that holds something cannot be removed.</li>
+</ul>
+<h3>Installations</h3>
+<p><strong>U menu › Camp Layout › Camp constructions</strong>, or in the plan: right click › Place an object › Installations to buy. Each one is unique: arena, training ground, arrow bench, kitchen corner, wine barrel, camp bench, washtubs, field latrine. For now, only the <strong>washtubs</strong> have an effect: dirty men go there to wash. The others are decoration (real effects are planned later). A removed installation must be bought again to come back.</p>
+<hr>
+<h2 id="en-ch4">4. Tents and beds</h2>
+<p><strong>A tent is only a shelter. Beds are what house the men.</strong> Place the beds inside the tents; the T key, in the plan, helps you see them.</p>
+<h3>One tent per craftsman, apart from the soldiers</h3>
+<p>It is possible, and recommended:</p>
+<ol>
+<li>Place a tent, then as many beds as you want inside.</li>
+<li><strong>Reserve each bed</strong> for the trade (chapter 5). The first bed reserved for the hunters goes to the first hunter, the second to the second, and so on.</li>
+<li>A craftsman without a reserved bed takes a soldier's bed, and the company will be one bed short.</li>
+</ol>
+<h3>The night</h3>
+<ul>
+<li>At <strong>10 pm</strong>, everyone takes a free bed. Without a bed, a man sleeps on the ground near a fire.</li>
+<li><strong>The guard</strong>: in a small camp, one man in four; from 24 men, half. Those without a bed are taken first. The rounds are set in the U menu, Staff page.</li>
+<li>The <strong>colonel</strong>, during his inspection, says if beds or seats are missing: he wants one bed per man and one seat per man not on rounds.</li>
+</ul>
+<h3>Bunkmates</h3>
+<ul>
+<li>Two beds <strong>4 m apart or less</strong> count as the same tent: each night, the two sleepers grow a little friendlier. Comrades fight better together; two rivals quarrel.</li>
+<li>A <strong>barracks fire</strong> serves as a meal spot for the men whose bed is 14 m away or less.</li>
+</ul>
+<hr>
+<h2 id="en-ch5">5. Reservations</h2>
+<p>Reserving an object means giving it to someone: no one else uses it any more.</p>
+<h3>How to do it</h3>
+<ul>
+<li>In the <strong>plan</strong>: select the objects (click, or drag to take several), then <strong>right click › Reserved for...</strong></li>
+<li>For whom: Henry, the bath ladies, the blacksmith, the courier, the Director, the hunters, the gardener, the water carrier, the woodcutter, the tavern, the companions, the armourer, the colonel, the groom, the sutler, the butcher, or <strong>No one (open to the men)</strong>.</li>
+<li>The program (H key) can do it too. Z undoes a reservation.</li>
+</ul>
+<h3>What it changes</h3>
+<ul>
+<li><strong>For Henry</strong>: a reserved bed is his own; he lies in it, and <strong>the game is saved when he wakes up</strong>. The washtub, the water point, the prie-dieu, the drying rack, the smokehouse, the hearth and the wine barrel only serve Henry if they are reserved for him. A tent reserved for Henry becomes his home.</li>
+<li><strong>For a trade</strong>: its beds go to its people, in order. A stall reserved for a trade takes its decoration and becomes its stand; its till is placed there.</li>
+<li><strong>For the colonel</strong>: his first reserved bed is his alone, and the next colonel inherits it.</li>
+<li><strong>For the named companions</strong>: their beds are never taken by a mercenary.</li>
+<li><strong>For the tavern</strong>: only the two-bench tables reserved for "tavern" serve its customers.</li>
+</ul>
+<h3>Beware</h3>
+<ul>
+<li><strong>Reserving a tent does not reserve its beds.</strong> Select the beds themselves (dragging a box over the tent takes them all). Only the "Men's tent (4 beds)" is a single object with its beds.</li>
+<li>A reserved training object is no longer used by the men.</li>
+<li>A copy loses its reservation.</li>
+</ul>
+<hr>
+<h2 id="en-ch6">6. Training</h2>
+<h3>The zones</h3>
+<p>In the plan, <strong>right click › The camp's zones</strong>: the briefing, the duels, the training, and the guards' rounds. The circle follows the mouse; the wheel changes its size; left click to place, right click to cancel.</p>
+<ul>
+<li><strong>The training zone</strong>: where the morning drill takes place.</li>
+<li><strong>The duel zone</strong>: where duels of honour are settled.</li>
+<li><strong>The briefing zone</strong>: where the Director gathers his men before a mission.</li>
+<li><strong>A training rack's zone</strong>: select the rack, then right click › Choose the zone. The bigger it is, the more pairs train at once (1 to 6).</li>
+</ul>
+<h3>What to put there</h3>
+<ul>
+<li><strong>The Training weapon rack</strong> (60 groschen): wooden-sword duels. A bout earns <strong>12 points</strong>. It is the only rack that gives duels.</li>
+<li><strong>The Straw dummy</strong> (40 groschen): 120 seconds of practice, <strong>6 points</strong>, then it waits 10 minutes.</li>
+<li><strong>The Archery target</strong> (40 groschen): for archers and crossbowmen. In the plan, drag the end of the green line to place the <strong>shooting point</strong> (2 to 150 m). The further the target, the more the shot earns. One target per archer. Keep the lane clear: if someone walks behind the target, the shooter waits.</li>
+</ul>
+<h3>When</h3>
+<ul>
+<li><strong>The morning drill</strong>, 8 am to noon, for everyone who is not exhausted.</li>
+<li><strong>The evening</strong>, 7 pm to 10 pm, for volunteers.</li>
+<li>The <strong>colonel</strong> leads the drill; otherwise the Director does.</li>
+</ul>
+<h3>What it earns</h3>
+<ul>
+<li><strong>100 points = 1 level</strong>, up to level 30. A man arrives at level 6.</li>
+<li>At <strong>level 10</strong>, he becomes seasoned; at <strong>level 20</strong>, a veteran. His equipment follows his rank.</li>
+<li>Training bonuses are paid when the chest is above 10,000 groschen.</li>
+</ul>
+<hr>
+<h2 id="en-ch7">7. The soldiers</h2>
+<h3>Hiring and ranks</h3>
+<div class="table"><table><thead><tr><th>Hire</th><th>Price</th><th>Starting strength</th></tr></thead><tbody><tr><td>Recruit (sword and shield, axe, mace, polearm, longsword…)</td><td>250</td><td>novice</td></tr><tr><td>Archer</td><td>450</td><td>novice (beginner)</td></tr><tr><td>Crossbowman</td><td>570</td><td>novice (beginner)</td></tr></tbody></table></div>
+<p><strong>Every man starts at the bottom of the ladder</strong>, at level 6, then improves through training and fighting. A foot soldier becomes <strong>seasoned</strong> at level 10 and a <strong>veteran</strong> at level 20. Archers rise through shooting: Beginner, Good shot, Lynx eye.</p>
+<p><strong>Equipment follows rank</strong>: a recruit leaves with little armour, a veteran with almost full armour.</p>
+<h3>A fit man</h3>
+<p>To go on a mission, a man needs at least level 6, 50 energy, 40 morale, 80 health, and no piece of equipment below 30%. He must not be on guard, punished, or at the baths.</p>
+<h3>Energy and morale</h3>
+<ul>
+<li><strong>Energy</strong> drops while the man is awake or working, and comes back seated, in bed or during a nap. A man returning from a mission is tired.</li>
+<li><strong>Morale</strong> drops with hunger, fatigue, dirt, wounds and debts. It rises when the man is well fed, rested, has money in his pocket and bonuses. Burning <strong>fires</strong>, the <strong>rest day</strong> and the <strong>colonel's visit</strong> lift the whole company's morale.</li>
+</ul>
+<h3>The colonel</h3>
+<p>He is appointed by himself: the best of your men. He leads the drill, inspects the camp morning and evening, sends the exhausted to bed and hands out fines (brawls, missed drill, drunk on guard). He only goes on hard missions.</p>
+<h3>Pay</h3>
+<p>Fighters have no fixed wage: <strong>their pay is 60% of each mission</strong>, paid at 8 pm. The highest ranks get a bigger share.</p>
+<h3>The dead</h3>
+<p>A dead man is replaced by the Director, up to the company size you chose, if there is a free bed and food. His purse is shared among his comrades. The weekly letter says what the replacements cost.</p>
+<hr>
+<h2 id="en-ch8">8. Missions and money</h2>
+<h3>How a mission leaves</h3>
+<ul>
+<li>The Director decides on his own several times a day, from 7 am to 5 pm. You can also ask him: <strong>"Find us a mission."</strong></li>
+<li>A troop has <strong>4 to 12 men</strong>. <strong>A third of the company stays in camp</strong>.</li>
+<li>He requires <strong>85% chances of winning</strong> and at most <strong>25% losses</strong>. He takes the smallest troop that passes this test.</li>
+<li>The enemies: marauders (the weakest), bandits, and Sigismund's men (the toughest). A weak camp, if it finds nothing else, also has small bands of 2 or 3 marauders.</li>
+<li><strong>One day in five is a rest day</strong>: no mission, but morale.</li>
+</ul>
+<h3>Why he answers "Nothing certain"</h3>
+<ul>
+<li>Not enough fit men (fatigue, wounds, worn equipment, guard duty).</li>
+<li>Men too weak: train them. A weak camp is also entitled to small missions when no regular mission is possible.</li>
+<li>You can also ask for "A harder mission, better paid.": he will take it as soon as he has a safe team.</li>
+</ul>
+<h3>What a mission earns</h3>
+<ul>
+<li>The <strong>bounty</strong> depends on the number and kind of enemies, the distance and your men's level.</li>
+<li>The <strong>enemy camp's chest</strong> and what is found <strong>on the bodies</strong> are added.</li>
+<li>On return, the men's welcome (meal, tankard, bath) is paid first. Then <strong>40% go to the chest</strong> and <strong>60% to the soldiers</strong>.</li>
+</ul>
+<h3>The camp's money</h3>
+<ul>
+<li><strong>Income</strong>: missions (by far the largest part), the craftsmen's taxes, fines, surplus sold in town.</li>
+<li><strong>Expenses</strong>: hiring, constructions, food bought in town, bonuses.</li>
+<li><strong>On the 7th evening</strong>, the week closes: on what is above 10,000 groschen, Henry receives his share and the Director his.</li>
+</ul>
+<h3>The red alert</h3>
+<p>Only Henry declares it, by talking to the Director. The camp goes on a war footing: more missions, for longer, with lower chances required (65%) and more losses accepted (50%). The dead cost a lot: keep it for great needs.</p>
+<hr>
+<h2 id="en-ch9">9. Setting up a craftsman</h2>
+<h3>Common rules</h3>
+<ul>
+<li><strong>Hiring</strong>: 5,000 groschen (the groom and the blacksmith's helper, 1,500), paid by the chest, in the <strong>U menu › Hiring</strong>.</li>
+<li><strong>His post</strong>: each craftsman works at his bench or stall. Place it first (see the list below).</li>
+<li><strong>His till</strong>: it places itself, free, next to his stall. It receives 200 starting groschen. The craftsman pays his materials and his people from it, and puts his sales in it. E on the till to see it (with the program running).</li>
+<li><strong>His first stock</strong> is included in the hiring price.</li>
+<li><strong>His wage</strong> is paid on the 7th day by his till, never by the chest.</li>
+<li><strong>Taxes</strong>: on the 7th day, the till pays the chest part of its earnings and of its excess.</li>
+<li><strong>The courier</strong> links to the town: he buys what the craftsmen lack.</li>
+<li><strong>The Director</strong> makes the round of the tills every day and reports those that are empty or in debt.</li>
+</ul>
+<h3>What each one needs</h3>
+<div class="table"><table><thead><tr><th>Craftsman</th><th>What he needs</th></tr></thead><tbody><tr><td>Blacksmith</td><td>the forge, placed with him; iron and charcoal</td></tr><tr><td>Bath ladies</td><td>the bath counter (optional); soap, water, wood</td></tr><tr><td>Courier</td><td>his desk</td></tr><tr><td>Hunters</td><td>the hunting post; a stall to sell</td></tr><tr><td>Gardener</td><td>the vegetable stall and at least one vegetable patch</td></tr><tr><td>Water carrier</td><td>the water cart</td></tr><tr><td>Woodcutter</td><td>the firewood store; a stall to sell</td></tr><tr><td>Tavern keeper</td><td>his stall; the wine barrel to sell wine</td></tr><tr><td>Armourer</td><td>his forge (the "Armourer's workshop" object)</td></tr><tr><td>Groom</td><td>the horse line</td></tr><tr><td>Sutler</td><td>her table</td></tr><tr><td>Butcher</td><td>the butcher's corner, and a smokehouse</td></tr></tbody></table></div>
+<h3>The right order</h3>
+<ol>
+<li><strong>The forge</strong>, as soon as equipment wears out: it repairs, and the men pay.</li>
+<li><strong>The hunters or the gardener</strong>: food is no longer bought in town.</li>
+<li><strong>The water carrier, the woodcutter, the courier</strong>: they keep the others running.</li>
+<li><strong>The rest</strong> when the chest allows it.</li>
+</ol>
+<p>Reserve <strong>his bed</strong> and <strong>his stall</strong> for each craftsman (chapter 5), and give him his own tent apart from the soldiers.</p>
+<hr>
+<h2 id="en-ch10">10. The trades and their chains</h2>
+<p>The craftsmen work for one another. Each one buys his materials from another, and pays from his till.</p>
+<ul>
+<li><strong>The hunters</strong> bring the meat. They sell it to the men and to the <strong>butcher</strong>; their hides go to the <strong>tannery</strong>, which makes the leather for the forge and the armourer.</li>
+<li><strong>The butcher</strong> salts the hunters' meat, then smokes it in the smokehouse: it keeps.</li>
+<li><strong>The gardener</strong> grows the vegetable patches; the <strong>water carrier</strong> waters them.</li>
+<li><strong>The water carrier</strong> supplies the camp's drink and the bath water.</li>
+<li><strong>The woodcutter</strong> supplies wood for the fires and the baths, and the <strong>forge's charcoal</strong>.</li>
+<li><strong>The forge</strong> repairs the weapons, armour and tools of the other trades.</li>
+<li><strong>The courier</strong> buys in town what the camp does not produce (salt, iron, soap, barrels, fodder), and sells the surplus and the loot.</li>
+</ul>
+<p><strong>Surplus</strong>: when the stores exceed their maximum, part of it is sold in town, at the price merchants pay.</p>
+<hr>
+<h2 id="en-ch11">11. The camp dictionary</h2>
+<p>Everything that can be bought and placed in the camp, sorted by use (lodging, meals, rest, fires, light, defence, training, justice, care, trades, sales, horses, command, money, storage, shelters, decoration), with its price, its path in the U menu and what it really does.</p>
+<p><em>(The full table is built from the mod itself, and is updated with each version.)</em></p>
+<p>Everything that can be bought and set up in the camp, with the names and help lines the U menu shows in English. Prices are read from the code. Objects are placed and paid from the camp chest: U key › Camp Layout › Place an object (or, on the plan, right click › Place an object).</p>
+<h3>Lodging</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Your tent, empty</td><td>free</td><td>Henry's lodging: the empty tent; on the plan, reserve the bed placed in it for him.</td></tr><tr><td>Men's tent</td><td>300 groschen</td><td>Lodging: four beds under a large tent. The Director only rehires with a free bed.</td></tr><tr><td>Low bed</td><td>free</td><td>Lodging: one bed. No free bed, no rehiring; in bed, +12 energy per hour.</td></tr><tr><td>High bed</td><td>60 groschen</td><td>Lodging: one bed, no better than a low bed; no free bed, no rehiring.</td></tr><tr><td>Double bed</td><td>120 groschen</td><td>Lodging: two beds. No free bed, no rehiring; in bed, +12 energy per hour.</td></tr><tr><td>Bench bed</td><td>20 groschen</td><td>Lodging: one bed, no better than a low bed; no free bed, no rehiring.</td></tr></tbody></table></div>
+<h3>Meals</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Squad fire</td><td>60 groschen</td><td>Meals: six seats; a man whose bed is 14 m away or less eats here. Counts as a fire.</td></tr><tr><td>Table and two benches</td><td>60 groschen</td><td>Meals: those eating standing sit here; a table for the quest; also used for dice.</td></tr><tr><td>Table and one bench</td><td>45 groschen</td><td>Meals: those eating standing come and sit here. Counts as a table for the quest.</td></tr><tr><td>Small table and two chairs</td><td>25 groschen</td><td>Meals: those eating standing come and sit here. Counts as a table for the quest.</td></tr><tr><td>Small table and a stool</td><td>20 groschen</td><td>Meals: those eating standing sit here; a table for the quest; also used for dice.</td></tr><tr><td>Camp hearth</td><td>40 groschen</td><td>Henry's meals, if reserved for him: he eats and cooks here. Counts as a fire for the quest.</td></tr></tbody></table></div>
+<h3>Rest</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Two-seat bench</td><td>15 groschen</td><td>Rest: a seated man regains 2 energy per hour; the colonel wants one seat per man.</td></tr><tr><td>Three-seat bench</td><td>25 groschen</td><td>Rest: a seated man regains 2 energy per hour; the colonel wants one seat per man.</td></tr><tr><td>High bench</td><td>25 groschen</td><td>Rest: a seated man regains 2 energy per hour; the colonel wants one seat per man.</td></tr><tr><td>Stool</td><td>5 groschen</td><td>Rest: a seated man regains 2 energy per hour; the colonel wants one seat per man.</td></tr><tr><td>Low chair</td><td>12 groschen</td><td>Rest: a seated man regains 2 energy per hour; the colonel wants one seat per man.</td></tr><tr><td>Tall chair</td><td>18 groschen</td><td>Rest: a seated man regains 2 energy per hour; the colonel wants one seat per man.</td></tr></tbody></table></div>
+<h3>Fire and morale</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Campfire with its 6 logs</td><td>20 groschen</td><td>Fire and morale: the Director refuels it; all fires lit, +1 morale per hour.</td></tr></tbody></table></div>
+<h3>Light</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Fire basket (lit at night)</td><td>60 groschen</td><td>Light: a fire lit from 8 pm to 7 am. Counts as a fire for the quest.</td></tr><tr><td>Standing torch</td><td>8 groschen</td><td>Light: lit day and night. No other effect.</td></tr><tr><td>Table lantern</td><td>15 groschen</td><td>Light: placed on a table. No other effect.</td></tr><tr><td>Large candle lamp</td><td>12 groschen</td><td>Light: placed on a table. No other effect.</td></tr></tbody></table></div>
+<h3>Defence</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Watchtower</td><td>800 groschen</td><td>Defence: an archer keeps watch here at night, two during an alert.</td></tr><tr><td>Palisade gate</td><td>1000 groschen</td><td>Defence: the Director posts a guard here, day and night.</td></tr></tbody></table></div>
+<h3>Training</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Camp weapon rack</td><td>60 groschen</td><td>Training: the morning drill point; no duels.</td></tr><tr><td>Straw dummy</td><td>40 groschen</td><td>Training: a free man practises here for 120 s; +6 combat points.</td></tr><tr><td>Training weapon rack</td><td>60 groschen</td><td>Training: wooden-sword duels; each bout gives +12 combat points.</td></tr><tr><td>Archery target</td><td>40 groschen</td><td>Training: hunters and archers shoot here; the farther the target, the more a shot is worth.</td></tr></tbody></table></div>
+<h3>Justice</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Pillory</td><td>200 groschen</td><td>Justice: the Director ties brawlers here, for 4 to 24 hours; without a pillory, the punishment waits.</td></tr></tbody></table></div>
+<h3>Equipment</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Grindstone</td><td>120 groschen</td><td>Equipment: the game's grindstone, for sharpening.</td></tr></tbody></table></div>
+<h3>Care and hygiene</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Bathmaid's counter</td><td>300 groschen</td><td>Hygiene: the bathmaid stands here; the bathhouse also works without it.</td></tr><tr><td>Washing tub</td><td>30 groschen</td><td>Henry's hygiene, if reserved for him: he washes here.</td></tr><tr><td>Water point</td><td>40 groschen</td><td>Henry's hygiene, if reserved for him: he washes here, and washes his linen with soap.</td></tr></tbody></table></div>
+<h3>Piety</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Prayer kneeler</td><td>60 groschen</td><td>Henry's piety, if reserved for him: he prays here.</td></tr></tbody></table></div>
+<h3>Trades</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Hunting post</td><td>80 groschen</td><td>Trade: the hunters' workbench; without it, no tanning.</td></tr><tr><td>Butcher's corner</td><td>200 groschen</td><td>Trade: the butcher's workbench; without it, he does not buy the hunters' meat.</td></tr><tr><td>Vegetable stall</td><td>80 groschen</td><td>Trade: the gardener's workbench; the harvest is brought here.</td></tr><tr><td>Courier's desk</td><td>120 groschen</td><td>Trade: the courier waits here for errands; the blacksmith places his orders here.</td></tr><tr><td>Smokehouse</td><td>150 groschen</td><td>Trade: the butcher smokes his salted meat here; without a smokehouse, no salted meat.</td></tr><tr><td>Small vegetable patch</td><td>80 groschen</td><td>Trade: about 10 provisions per harvest, if the gardener is hired.</td></tr><tr><td>Medium vegetable patch</td><td>160 groschen</td><td>Trade: about 22 provisions per harvest, if the gardener is hired.</td></tr><tr><td>Large vegetable patch and its scarecrow</td><td>300 groschen</td><td>Trade: about 39 provisions per harvest, if the gardener is hired.</td></tr><tr><td>Armourer's workshop</td><td>600 groschen</td><td>Trade: the armourer's workbench; without it, no armour repair or crafting.</td></tr><tr><td>Water cart</td><td>300 groschen</td><td>Trade: the water carrier's workbench; he sells cups of water here.</td></tr><tr><td>Firewood store</td><td>150 groschen</td><td>Trade: the woodcutter's workbench; without it, no tree felling near the camp.</td></tr></tbody></table></div>
+<h3>Selling</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Sutler's table (and her cart)</td><td>250 groschen</td><td>Sales: the sutler sells her snacks here; without a table, no sales and no hens.</td></tr><tr><td>Gardener's stall</td><td>100 groschen</td><td>Sales: the gardener sells vegetables and meals here, if he is behind the stall.</td></tr><tr><td>Woodcutter's stall</td><td>100 groschen</td><td>Sales: the woodcutter sells his wood here; the forge buys its charcoal here.</td></tr><tr><td>Hunters' stall</td><td>100 groschen</td><td>Sales: the hunters sell meat here.</td></tr><tr><td>Tavern keeper's stall</td><td>250 groschen</td><td>Sales: the tavern keeper sells beer and wine here; without this stall, no sales.</td></tr><tr><td>Wine barrel</td><td>150 groschen</td><td>Sales: without it, the tavern sells no wine.</td></tr><tr><td>Beer barrel on a stump</td><td>100 groschen</td><td>Sales: a customer with no seat at a table draws his beer here.</td></tr></tbody></table></div>
+<h3>Kitchen</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Drying rack</td><td>100 groschen</td><td>Henry's kitchen, if reserved for him: he dries meat, fruit and herbs here.</td></tr></tbody></table></div>
+<h3>Horses</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Horse line (two places, hay, pails)</td><td>300 groschen</td><td>Horses: two horse places; the groom works there. Fodder and board to pay.</td></tr></tbody></table></div>
+<h3>Command</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Miniature tent</td><td>free</td><td>Command: E key, Camp Management.</td></tr><tr><td>Director's tent</td><td>free</td><td>Command: the Director's bed; it is set up on its own when he is hired.</td></tr><tr><td>Director's desk</td><td>400 groschen</td><td>Command: the Director works here; his reports are left here (E to read).</td></tr></tbody></table></div>
+<h3>Money</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Bank strongbox</td><td>free</td><td>Money: E key, the Camp bank; hold E, Scriptorium. Raiders target it.</td></tr><tr><td>Workshop till</td><td>free</td><td>Money: a trade's till (E). It sets itself up, next to a stall or a workbench.</td></tr></tbody></table></div>
+<h3>Storage</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Chest</td><td>50 groschen</td><td>Storage: a chest from the game; what is put in it stays, and goes to Henry when the camp is sold.</td></tr></tbody></table></div>
+<h3>Shelter</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Small tent</td><td>120 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Small green tent</td><td>140 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Small red tent</td><td>140 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Small tent, other shape</td><td>140 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Forest tent A</td><td>180 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Forest tent B</td><td>180 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Forest tent C</td><td>180 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Rustic tent</td><td>100 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Worn tent</td><td>80 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Cuman tent</td><td>400 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large round tent</td><td>250 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large round tent, colour 1</td><td>250 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large round tent, colour 2</td><td>250 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large square tent</td><td>300 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large green square tent</td><td>320 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large square tent B</td><td>320 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large square tent C</td><td>320 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Yurt</td><td>600 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Lord's tent</td><td>900 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Lord's tent, open</td><td>900 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Royal tent</td><td>2000 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Royal tent, open</td><td>2000 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Forest awning</td><td>60 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Large awning</td><td>150 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr><tr><td>Forest shelter</td><td>50 groschen</td><td>Shelter: no bed or seat; beds are placed inside. No other effect.</td></tr></tbody></table></div>
+<h3>Staging</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Cooking corner</td><td>200 groschen</td><td>Staging: the men pretend to cook here; no meal is served.</td></tr><tr><td>Cooking corner with shelves</td><td>250 groschen</td><td>Staging: the men pretend to cook here; no meal is served.</td></tr><tr><td>Drinking table</td><td>60 groschen</td><td>Staging: two men pretend to drink here.</td></tr></tbody></table></div>
+<h3>Decoration</h3>
+<div class="table"><table><thead><tr><th>Object</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Palisade, one section</td><td>400 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Horse trough</td><td>60 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Covered wagon</td><td>300 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Covered wagon with benches</td><td>300 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Hay wagon</td><td>300 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Cheval de frise (stakes)</td><td>100 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Banner</td><td>150 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Painted pavise</td><td>40 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Pavise, second pattern</td><td>40 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Pavise on its stand</td><td>40 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Camp latrines</td><td>60 groschen</td><td>Decor: no gameplay effect; at least 20 m from the tents, fires and kitchen.</td></tr><tr><td>Table with dishes and lamp</td><td>80 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Guard's weapon rack</td><td>120 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Halberds in a barrel</td><td>150 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Axes in a crate</td><td>120 groschen</td><td>Decor: no gameplay effect.</td></tr><tr><td>Armour stand</td><td>150 groschen</td><td>Decor: no gameplay effect.</td></tr></tbody></table></div>
+<p>And the 57 pieces of “Game decoration” (crates, barrels and sacks, baskets, goods and stores, cluttered tables, laundry and furs): decoration, no game effect, 25 groschen each unless priced apart.</p>
+<h3>Hiring men</h3>
+<p>U key › Hiring › Foot soldiers (Recruit, then the weapon style and the number) or Archers and crossbowmen. Program: The men › Hire. Paid from the camp chest. The Director pays the same prices when he replaces the dead, up to the company size (Hiring › Company size).</p>
+<p>Only novices are hired, all at the first rank: no seasoned man, no veteran. Each one rises by training: below level 10, recruit (shooter: beginner); from 10 to 19, seasoned (good shot); from 20, veteran (eagle eye). A seasoned man or a veteran hired before 2.1.0 keeps his rank.</p>
+<div class="table"><table><thead><tr><th>Man</th><th>Price</th><th>What he is</th></tr></thead><tbody><tr><td>Recruit</td><td>250 groschen</td><td>A foot soldier at the first rank, in the chosen weapon style. He rises by training.</td></tr><tr><td>Archer</td><td>450 groschen</td><td>The recruit and the first-rank bow (bow_b, 200 groschen at the game's price), at the first rank (Beginner). He rises with his shooting level.</td></tr><tr><td>Crossbowman</td><td>570 groschen</td><td>The recruit and the old hunting crossbow (crossbowLightCheap01, 320 groschen at the game's price), at the first rank; his bolts come from the camp's stock and are paid apart.</td></tr></tbody></table></div>
+<h3>Trades and services</h3>
+<p>U key › Hiring › The service › the trade › hire it. Paid from the camp chest, no refund. Program: The craftsmen › Hire or dismiss.</p>
+<div class="table"><table><thead><tr><th>Trade</th><th>Price</th><th>What it brings</th></tr></thead><tbody><tr><td>The Director</td><td>included in the charter</td><td>The camp's Director: his missions, the bank, the orders. Once hired, he sets up his tent and bed, and waits in front of it.</td></tr><tr><td>The bathmaids</td><td>5000 groschen</td><td>The bathhouse and laundry, and their tent.</td></tr><tr><td>The blacksmith</td><td>5000 groschen</td><td>His forge, and his tent.</td></tr><tr><td>The blacksmith's assistant</td><td>1500 groschen</td><td>Small repairs at the workbench, so the blacksmith can make his weapons (the forge is needed).</td></tr><tr><td>The courier</td><td>5000 groschen</td><td>The camp's errands and yours; his tent.</td></tr><tr><td>The two hunters</td><td>5000 groschen</td><td>On horseback, the game of the area; their hunting post.</td></tr><tr><td>The gardener</td><td>5000 groschen</td><td>He digs, sows and harvests your vegetable patches; the vegetable stall. A woman gardener joins him if he is overworked 7 days running, paid from his till.</td></tr><tr><td>The water carrier</td><td>5000 groschen</td><td>To the well, several trips a day; his water cart.</td></tr><tr><td>The woodcutter</td><td>5000 groschen</td><td>Firewood, charcoal and branches. His helper joins him if he is overworked 7 days running, paid from his till.</td></tr><tr><td>The tavern keeper</td><td>5000 groschen</td><td>Beer and wine by the cup; his tavern keeper's stall.</td></tr><tr><td>The armourer</td><td>5000 groschen</td><td>Repairs and fits armour, makes simple pieces; his small camp forge.</td></tr><tr><td>The groom</td><td>1500 groschen</td><td>Tends the horses of the horse line, with the game's own gestures; buy a horse line and its horses first.</td></tr><tr><td>The sutler</td><td>5000 groschen</td><td>Sells the men a snack (bread and bacon) at her counter, paid into her till; she repays the chest for the provisions taken. Set up her counter first (Camp Layout, Traders' stalls).</td></tr><tr><td>The butcher</td><td>5000 groschen</td><td>Buys the hunters' meat at his corner, salts it, then smokes it in the smokehouse. Set up his corner first (Camp Layout, Kitchen).</td></tr></tbody></table></div>
+<h3>Installations and the alchemy workshop</h3>
+<p>U key › Camp Layout › Camp constructions › the installation › Buy and place (camp chest). Program: Build › The constructions.</p>
+<div class="table"><table><thead><tr><th>Installation</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Arena</td><td>1200 groschen</td><td>Decoration: no game effect; nobody is sent there (the duels take place at the weapon racks).</td></tr><tr><td>Training ground</td><td>400 groschen</td><td>Staging: two men practise with the sword there; no gain.</td></tr><tr><td>Fletcher's bench</td><td>300 groschen</td><td>Staging: a man repairs arrows there; no arrow is made.</td></tr><tr><td>Cooking corner</td><td>200 groschen</td><td>Staging: four places where the men stir and eat; no meal is counted.</td></tr><tr><td>Wine barrel</td><td>150 groschen</td><td>Staging: a man pretends to drink there; no effect.</td></tr><tr><td>Camp bench</td><td>60 groschen</td><td>Staging: two men doze there; no rest is counted.</td></tr><tr><td>Washtubs</td><td>60 groschen</td><td>Hygiene: two basins; dirty men go there to wash, one at a time per basin.</td></tr><tr><td>Latrine</td><td>40 groschen</td><td>Staging: a man stands there for 45 s; no need is linked to it.</td></tr><tr><td>Alchemy</td><td>3000 groschen</td><td>Decoration: no game effect; the camp is rebuilt in the same place to make room for it.</td></tr></tbody></table></div>
+<h3>The camp of 1403: additions to buy</h3>
+<p>U key › Camp Layout › Camp constructions › The camp of 1403 › Buy (camp chest). Program: Build › The constructions.</p>
+<div class="table"><table><thead><tr><th>Addition</th><th>Price</th><th>What it does</th></tr></thead><tbody><tr><td>Enlarge the baths</td><td>600 groschen</td><td>The same tent, a little larger, and two more bathing places; only set where the ground is free. Paid by the camp chest.</td></tr><tr><td>The courier's table and stool</td><td>25 groschen</td><td>A small table and a stool at the courier's lectern, if the ground is free. Paid by the camp chest.</td></tr><tr><td>A horse</td><td>700 groschen</td><td>A horse of the game, at the price of the cheapest horse of its traders, tied to a free place of a horse line. Paid by the camp chest.</td></tr></tbody></table></div>
+<hr>
+<h2 id="en-ch12">12. The keys</h2>
+<div class="table"><table><thead><tr><th>Key</th><th>Where</th><th>What it does</th></tr></thead><tbody><tr><td><strong>U</strong></td><td>anywhere</td><td>opens and closes the camp menu</td></tr><tr><td><strong>H</strong></td><td>anywhere</td><td>opens and closes the "Gestion du camp" program (if running)</td></tr><tr><td><strong>E</strong></td><td>on an object</td><td>use it (Bank strongbox, miniature tent, till, letter…)</td></tr><tr><td><strong>T</strong></td><td>in the plan</td><td>hide or show the tents</td></tr><tr><td><strong>Z</strong></td><td>in the plan</td><td>undo the last action</td></tr><tr><td><strong>Esc</strong></td><td>in the plan</td><td>leave the plan</td></tr><tr><td>Wheel</td><td>in the plan</td><td>turn the selected object, or zoom</td></tr></tbody></table></div>
+<hr>
+<h2 id="en-ch13">13. Pitfalls to avoid</h2>
+<ol>
+<li><strong>Too many beds</strong>: every free bed is filled by the Director. Place beds as you go, and set the company size.</li>
+<li><strong>The chest below 10,000 groschen</strong>: bonuses and shares wait. Deposit money.</li>
+<li><strong>Removing does not refund</strong>: only Z, with the plan open, gives the money back.</li>
+<li><strong>Reserving a tent does not reserve its beds.</strong></li>
+<li><strong>A craftsman without a reserved bed</strong> takes a soldier's.</li>
+<li><strong>"Your tent, empty"</strong> (a second tent for Henry, to furnish): reserve the bed you place in it for yourself in the plan, or it will go to your men. The tent given at the founding is already yours.</li>
+<li><strong>T does not open the plan</strong>: go through U › Camp Layout › The camp plan.</li>
+<li><strong>The plan closes by itself</strong> after two minutes without any action.</li>
+<li><strong>Decoration earns nothing</strong>: buy it when the camp makes money.</li>
+<li><strong>The red alert</strong> sends out more troops, but it costs men.</li>
+</ol>
+<hr>
+<p><em>Scriptorium is a mod by JoVenGer. It replaces no game file and does not interfere in any way with the base game.</em></p></div></div></main>
+<footer><span data-langue="fr">Scriptorium est un mod de JoVenGer. Il ne remplace aucun fichier du jeu.</span><span data-langue="en">Scriptorium is a mod by JoVenGer. It replaces no game file.</span></footer>
+<a class="haut" href="#haut" aria-label="Top">↑</a>
+<script>
+function choisir(l){document.querySelectorAll('[data-langue]').forEach(function(e){e.classList.toggle('vue',e.dataset.langue===l)});
+document.querySelectorAll('.langues button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+document.documentElement.lang=l;try{localStorage.setItem('langue_du_guide',l)}catch(e){}}
+var l='en';try{l=localStorage.getItem('langue_du_guide')||''}catch(e){}
+if(location.hash.indexOf('#fr')===0)l='fr';else if(location.hash.indexOf('#en')===0)l='en';
+if(!l){l=(navigator.language||'en').toLowerCase().indexOf('fr')===0?'fr':'en'}choisir(l);
+</script></body></html>
