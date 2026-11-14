@@ -29,8 +29,8 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 [data-langue]{display:none}[data-langue].vue{display:block}
 </style></head>
 <body><header id="haut"><h1>Scriptorium</h1>
-<p data-langue="fr">Le guide complet du camp — version 2.3.0 — un mod de JoVenGer pour Kingdom Come: Deliverance II</p>
-<p data-langue="en">The complete camp guide — version 2.3.0 — a mod by JoVenGer for Kingdom Come: Deliverance II</p>
+<p data-langue="fr">Le guide complet du camp — version 2.4.0 — un mod de JoVenGer pour Kingdom Come: Deliverance II</p>
+<p data-langue="en">The complete camp guide — version 2.4.0 — a mod by JoVenGer for Kingdom Come: Deliverance II</p>
 <div class="langues"><button data-l="fr" onclick="choisir('fr')">Français</button><button data-l="en" onclick="choisir('en')">English</button></div></header>
 <main><div data-langue="fr"><div class="carte vedette">
 <p>Avec Scriptorium, Henry fonde et dirige sa propre compagnie de mercenaires. Il achète une patente, plante son camp où il le veut, engage des soldats et des artisans, puis les fait vivre, s'entraîner et partir en mission. Ce guide explique tout, dans l'ordre, pour bien démarrer, même avec peu d'argent.</p></div><nav class="carte sommaire"><h3>Sommaire</h3><ol><li><a href="#fr-ch1">Bien commencer, avec peu d'argent</a></li><li><a href="#fr-ch2">Le menu U, le programme et le Directeur</a></li><li><a href="#fr-ch3">La construction est libre</a></li><li><a href="#fr-ch4">Les tentes et les lits</a></li><li><a href="#fr-ch5">Les réservations</a></li><li><a href="#fr-ch6">L'entraînement</a></li><li><a href="#fr-ch7">Les soldats</a></li><li><a href="#fr-ch8">Les missions et l'argent</a></li><li><a href="#fr-ch9">Bien monter un artisan</a></li><li><a href="#fr-ch10">Les métiers et leurs chaînes</a></li><li><a href="#fr-ch11">Le dictionnaire du camp</a></li><li><a href="#fr-ch12">Les touches</a></li><li><a href="#fr-ch13">Les pièges à éviter</a></li></ol></nav><div class="carte"><h2 id="fr-ch1">1. Bien commencer, avec peu d'argent</h2>
@@ -362,8 +362,18 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <li>Quand une couleur n'existe pas pour une pièce, elle prend <strong>la teinte la plus proche du jeu</strong>, et l'aide du menu U le dit (en noir, le chaperon des archers est vert olive foncé ; en rouge, la capuche des fantassins est rouille).</li>
 <li><strong>La tenue d'origine</strong> est le choix par défaut : une partie ne change pas tant que vous ne choisissez rien.</li>
 <li>Le gambison, les chausses et la calotte <strong>achetés à la forge</strong> prennent aussi la couleur de la pièce qu'ils couvrent (le gambison et les chausses la couleur du corps, ou celle de la capuche pour les chausses du Confirmé ; la calotte celle de la capuche). Ils gardent leurs valeurs et leur usure.</li>
-<li>Les vêtements de la compagnie sont <strong>des objets du mod</strong> : si vous retirez le mod, ceux qui restent dans une sauvegarde disparaissent, sans rien casser.</li>
-<li>Une pièce d'armure gardée sur un ennemi reste portée par-dessus : elle peut cacher une couleur.</li>
+<li>Les vêtements de la compagnie sont <strong>des objets du mod</strong> : si vous retirez le mod, ceux qu'Henry a repris redeviennent, dans son sac, la pièce d'origine, avec la même usure ; les autres disparaissent avec les hommes, sans rien casser.</li>
+<li>Une pièce d'armure gardée sur un ennemi reste portée par-dessus ; depuis la 2.4.0, son tissu prend aussi la couleur (voir « Le butin aux couleurs de la compagnie »).</li>
+</ul>
+<h3>Le butin aux couleurs de la compagnie</h3>
+<ul>
+<li><strong>Le butin qu'un soldat garde prend les couleurs de la compagnie</strong> : un manteau, un gambison, une capuche, une coiffe, des chausses, des braies, une tunique ou le drap d'une brigandine pris à un ennemi prend la couleur de la pièce de la tenue qu'il couvre, à la même place (le torse et les bras la couleur du corps, la tête celle de la capuche, les jambes celle des jambes de la tenue).</li>
+<li><strong>La couleur ne change que la couleur</strong> : chaque pièce garde exactement sa protection, son poids, son prix et son usure.</li>
+<li>Quand la couleur n'existe pas pour une pièce, elle prend <strong>la teinte la plus proche du jeu</strong>.</li>
+<li><strong>Le métal, le cuir, les cottes d'armes à blason et les bandages</strong> ne changent pas.</li>
+<li>En <strong>tenue d'origine</strong>, le butin reste tel qu'il a été pris.</li>
+<li>Les soldats se reteignent <strong>un à un</strong>, au même rythme que la forge ; jamais au bain, couchés ou en combat.</li>
+<li><strong>Si vous retirez le mod</strong>, une pièce teinte qu'Henry a reprise à un homme redevient, dans son sac, la pièce d'origine, avec la même usure. Il en va de même pour les vêtements de la compagnie et les pièces de la forge.</li>
 </ul>
 <hr>
 <h2 id="fr-ch8">8. Les missions et l'argent</h2>
@@ -990,8 +1000,18 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <li>When a colour does not exist for a piece, it takes <strong>the closest dye in the game</strong>, and the U menu help says so (in black, the archers' chaperon is dark olive green; in red, the foot soldiers' hood is rust).</li>
 <li><strong>The original garb</strong> is the default choice: a game does not change until you choose something.</li>
 <li>The gambeson, hose and cap <strong>bought at the forge</strong> also take the colour of the piece they cover (the gambeson and the hose the body colour, or the hood colour for the Seasoned's hose; the cap the hood colour). They keep their own values and wear.</li>
-<li>The company's garments are <strong>items of the mod</strong>: if you remove the mod, those left in a saved game disappear, without breaking anything.</li>
-<li>A piece of armour kept from an enemy is still worn on top: it may hide a colour.</li>
+<li>The company's garments are <strong>items of the mod</strong>: if you remove the mod, those Henry took back become, in his bag, the original piece again, with the same wear; the others disappear with the men, without breaking anything.</li>
+<li>A piece of armour kept from an enemy is still worn on top; since 2.4.0, its cloth also takes the colour (see "Loot in the company's colours").</li>
+</ul>
+<h3>Loot in the company's colours</h3>
+<ul>
+<li><strong>The loot a soldier keeps takes the company's colours</strong>: a coat, a gambeson, a hood, a coif, hose, padded trousers, a tunic or the cloth of a brigandine taken from an enemy takes the colour of the garb piece it covers, in the same place (the torso and arms the body colour, the head the hood colour, the legs the colour of the garb's legs).</li>
+<li><strong>The colour only changes the colour</strong>: each piece keeps exactly its protection, weight, price and wear.</li>
+<li>When the colour does not exist for a piece, it takes <strong>the closest dye in the game</strong>.</li>
+<li><strong>Metal, leather, coats of arms and bandages</strong> do not change.</li>
+<li>In <strong>the original garb</strong>, the loot stays as it was taken.</li>
+<li>Soldiers are re-dyed <strong>one by one</strong>, at the same pace as the forge; never while bathing, lying down or fighting.</li>
+<li><strong>If you remove the mod</strong>, a dyed piece that Henry took back from a man becomes, in his bag, the original piece again, with the same wear. The same goes for the company's garments and the forge pieces.</li>
 </ul>
 <hr>
 <h2 id="en-ch8">8. Missions and money</h2>
