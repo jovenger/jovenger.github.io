@@ -29,8 +29,8 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 [data-langue]{display:none}[data-langue].vue{display:block}
 </style></head>
 <body><header id="haut"><h1>Scriptorium</h1>
-<p data-langue="fr">Le guide complet du camp — version 2.6.0 — un mod de JoVenGer pour Kingdom Come: Deliverance II</p>
-<p data-langue="en">The complete camp guide — version 2.6.0 — a mod by JoVenGer for Kingdom Come: Deliverance II</p>
+<p data-langue="fr">Le guide complet du camp — version 2.7.1 — un mod de JoVenGer pour Kingdom Come: Deliverance II</p>
+<p data-langue="en">The complete camp guide — version 2.7.1 — a mod by JoVenGer for Kingdom Come: Deliverance II</p>
 <div class="langues"><button data-l="fr" onclick="choisir('fr')">Français</button><button data-l="en" onclick="choisir('en')">English</button></div></header>
 <main><div data-langue="fr"><div class="carte vedette">
 <p>Avec Scriptorium, Henry fonde et dirige sa propre compagnie de mercenaires. Il achète une patente, plante son camp où il le veut, engage des soldats et des artisans, puis les fait vivre, s'entraîner et partir en mission. Ce guide explique tout, dans l'ordre, pour bien démarrer, même avec peu d'argent.</p></div><nav class="carte sommaire"><h3>Sommaire</h3><ol><li><a href="#fr-ch1">Bien commencer, avec peu d'argent</a></li><li><a href="#fr-ch2">Le menu U, le programme et le Directeur</a></li><li><a href="#fr-ch3">La construction est libre</a></li><li><a href="#fr-ch4">Les tentes et les lits</a></li><li><a href="#fr-ch5">Les réservations</a></li><li><a href="#fr-ch6">L'entraînement</a></li><li><a href="#fr-ch7">Les soldats</a></li><li><a href="#fr-ch8">Les missions et l'argent</a></li><li><a href="#fr-ch9">Bien monter un artisan</a></li><li><a href="#fr-ch10">Les métiers et leurs chaînes</a></li><li><a href="#fr-ch11">Le dictionnaire du camp</a></li><li><a href="#fr-ch12">Les touches</a></li><li><a href="#fr-ch13">Les pièges à éviter</a></li></ol></nav><div class="carte"><h2 id="fr-ch1">1. Bien commencer, avec peu d'argent</h2>
@@ -107,21 +107,37 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <h2 id="fr-ch2">2. Le menu U, le programme et le Directeur</h2>
 <p>Le camp se gère de trois façons, qui agissent toutes sur le même camp et le même coffre.</p>
 <ul>
-<li><strong>La touche U</strong> : le menu dans le jeu. U l'ouvre et le referme (Échap ne le ferme pas). Juste après un chargement, attendez quelques secondes avant d'appuyer.</li>
+<li><strong>La touche U</strong> : le menu dans le jeu. U l'ouvre et le referme (Échap ne le ferme pas). Une autre touche se choisit au menu, « Réglages » : F2, Inser, Fin, Page haut ou Page bas ; le choix est gardé dans la partie. Sans le menu (un autre mod prend U) : dans la console du jeu, scriptorium_touche_f2, scriptorium_touche_insert, scriptorium_touche_end, scriptorium_touche_pgup ou scriptorium_touche_pgdn ; scriptorium_touche_u revient à U, scriptorium_touche dit la touche actuelle. Juste après un chargement, attendez quelques secondes avant d'appuyer.</li>
 <li><strong>La touche H</strong> : le programme « Gestion du camp », une fenêtre à part devant le jeu. Il faut l'avoir installé et lancé ; sans lui, H ne fait rien et U marche toujours.</li>
 <li><strong>Le Directeur</strong> : parlez-lui. Ses sujets : « Comment va le camp ? », « Les missions. », « Que me conseilles-tu ? », « Des fautes aujourd'hui ? », « Le coffre. », « Les grandes mesures. ».</li>
 </ul>
 <p><strong>La lettre du Directeur</strong> : chaque semaine, il vous écrit. Elle se lit au menu U : le coffre, les rentrées, les dépenses, le bénéfice, les missions gagnées, les morts et ce qu'ils ont coûté. Il y propose trois mesures, et vous en choisissez une.</p>
 <h3>Retirer le mod d'une partie</h3>
 <ul>
-<li><strong>Menu U › Retirer le mod de cette partie › Oui</strong>, avant d'enlever le mod du jeu : le camp fondé est vendu au notaire, les hommes sont payés et rentrent chez eux, et tout ce qui est au mod quitte la partie. Puis la partie est sauvegardée : elle se chargera ensuite sans le mod.</li>
+<li><strong>Menu U › Réglages › Retirer le mod de cette partie › Oui</strong>, avant d'enlever le mod du jeu : le camp fondé est vendu au notaire, les hommes sont payés et rentrent chez eux, et tout ce qui est au mod quitte la partie. Puis la sauvegarde est demandée au jeu : c'est elle qui se chargera sans le mod.</li>
+<li><strong>Quand</strong> : de jour (de 6 h à 20 h), au calme, Henry debout et hors conversation. Sinon, rien n'est fait, et la barre du bas le dit en clair : « Le mod n'est PAS retiré : ne l'enlevez pas », avec la raison.</li>
+<li><strong>Une troupe du Directeur dehors</strong> : le retrait l'attend. Le Directeur n'envoie plus de nouvelle troupe, aucune mission en cours n'est coupée, et la barre du bas dit combien d'hommes sont encore dehors. Quand tous sont rentrés, le retrait se fait de lui-même, avec les mêmes conditions (de jour, au calme, Henry debout). Dans le menu, vous pouvez le relancer tout de suite, ou y renoncer : le Directeur reprend alors ses missions. Charger une partie annule l'attente.</li>
 <li><strong>Jamais pendant un combat</strong> : si Henry est en combat au moment de sauvegarder, le mod attend la fin du combat (une minute au plus). Si le combat dure, la partie n'est pas sauvegardée et la barre du bas dit : « Mettez-vous à l'abri, puis sauvegardez vous-même ».</li>
+<li><strong>Ensuite</strong> : vérifiez dans « Charger » qu'une sauvegarde automatique porte l'heure du retrait, sans la charger. Ne chargez aucune partie : quittez le jeu, puis enlevez le mod. Si le jeu a refusé la sauvegarde, la barre du bas le dit : sauvegardez vous-même (dans un lit, par exemple), puis quittez.</li>
+<li><strong>Une partie retirée le reste</strong> : rechargée avec le mod encore installé, le mod n'y fait plus rien, et la barre du bas dit de l'enlever.</li>
+<li><strong>Revenir en arrière</strong> : remettez le mod, puis chargez une sauvegarde d'avant le retrait.</li>
 </ul>
 <h3>Le voyage rapide</h3>
 <ul>
 <li>Pendant un <strong>voyage rapide</strong>, le camp se met en pause : le voyage est aussi rapide que sans le mod.</li>
 <li><strong>À l'arrivée</strong>, le camp reprend : les repas tombés pendant le voyage sont servis une fois, et la décision de mission du Directeur est prise s'il l'a manquée. Rien n'est perdu, rien n'est payé deux fois.</li>
 <li>Quand vous êtes simplement ailleurs, à pied, à cheval, en train d'attendre ou de dormir, le camp continue de vivre sans vous.</li>
+</ul>
+<h3>Si le Directeur meurt</h3>
+<ul>
+<li><strong>Un nouveau Directeur arrive au camp le lendemain matin</strong>, hors de la vue d'Henry. Il reprend le coffre, les réglages et la lettre de la semaine ; la barre noire l'annonce.</li>
+<li>Le corps de l'ancien est enterré comme celui de vos hommes, et son équipement est revendu au profit du coffre.</li>
+<li>Cela vaut aussi pour une partie où il était déjà mort.</li>
+</ul>
+<h3>La touche du menu et les réglages</h3>
+<ul>
+<li><strong>Menu U › Réglages</strong> : choisissez la touche qui ouvre le menu : U (par défaut), F2, Inser, Fin, Page haut ou Page bas. Seules des touches que le jeu laisse libres sont proposées ; le choix est gardé dans la partie.</li>
+<li><strong>« Retirer le mod de cette partie »</strong> se trouve aussi dans « Réglages ».</li>
 </ul>
 <hr>
 <h2 id="fr-ch3">3. La construction est libre</h2>
@@ -396,6 +412,11 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <li><strong>Tout le camp s'arrête à sa venue</strong> : les hommes présents laissent exercices, tirs et duels d'entraînement et se tiennent en rangs derrière Henry, tournés vers lui ; les départs en mission attendent. À son départ, chacun reprend. Les sentinelles restent à leur poste, les hommes dehors restent dehors, et une alerte lève le rassemblement aussitôt.</li>
 <li><strong>Les hommes prêtés</strong> partent avec lui en file, montent à cheval au bord du camp, et reviennent sous le même nom, avec leur bourse.</li>
 </ul>
+<h3>Vos hommes défendent Henry</h3>
+<ul>
+<li><strong>Quand des bandits attaquent Henry hors du camp</strong>, les hommes qui le suivent, à moins de 80 m, les combattent, chacun le plus proche. Au calme, chacun reprend sa place derrière Henry.</li>
+<li>Jamais contre un homme du camp, ni pendant un duel ou un pugilat ; un blessé ne combat pas.</li>
+</ul>
 <hr>
 <h2 id="fr-ch8">8. Les missions et l'argent</h2>
 <h3>Comment une mission part</h3>
@@ -465,6 +486,10 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <ul>
 <li>Chaque mort est remplacé au <strong>prix d'embauche</strong> : recrue 250 gros, archer 450, arbalétrier 570.</li>
 <li>Des recrues perdent souvent un homme par mission. <strong>Entraînez-les</strong> : plus fortes, elles meurent moins et rapportent davantage.</li>
+</ul>
+<h3>En mission, en selle jusqu'au bout</h3>
+<ul>
+<li><strong>Les hommes partis en mission restent en selle tout le trajet</strong>, jusqu'au lieu de la mission ou jusqu'au retour au camp, et descendent à l'arrivée.</li>
 </ul>
 <hr>
 <h2 id="fr-ch9">9. Bien monter un artisan</h2>
@@ -777,21 +802,37 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <h2 id="en-ch2">2. The U menu, the program and the Director</h2>
 <p>The camp is managed in three ways, all acting on the same camp and the same chest.</p>
 <ul>
-<li><strong>The U key</strong>: the in-game menu. U opens and closes it (Esc does not close it). Right after loading, wait a few seconds before pressing it.</li>
+<li><strong>The U key</strong>: the in-game menu. U opens and closes it (Esc does not close it). Another key can be chosen in the menu, “Settings”: F2, Insert, End, Page Up or Page Down; the choice is kept in the save. Without the menu (another mod takes U): in the game console, scriptorium_touche_f2, scriptorium_touche_insert, scriptorium_touche_end, scriptorium_touche_pgup or scriptorium_touche_pgdn; scriptorium_touche_u goes back to U, scriptorium_touche shows the current key. Right after loading, wait a few seconds before pressing it.</li>
 <li><strong>The H key</strong>: the "Gestion du camp" program (camp management), a separate window in front of the game. It must be installed and running; without it, H does nothing and U still works.</li>
 <li><strong>The Director</strong>: talk to him. His topics: "How fares the camp?", "The missions.", "What do you advise?", "Any offences today?", "The chest.", "The major measures.".</li>
 </ul>
 <p><strong>The Director's letter</strong>: every week, he writes to you. It is read in the U menu: the chest, income, expenses, profit, missions won, the dead and what they cost. He proposes three measures, and you choose one.</p>
 <h3>Removing the mod from a save</h3>
 <ul>
-<li><strong>U menu › Remove the mod from this game › Yes</strong>, before removing the mod from the game: a founded camp is sold to the notary, the men are paid and go home, and everything that belongs to the mod leaves the save. Then the game is saved: it will load without the mod.</li>
+<li><strong>U menu › Settings › Remove the mod from this game › Yes</strong>, before removing the mod from the game: a founded camp is sold to the notary, the men are paid and go home, and everything that belongs to the mod leaves the save. Then a save is requested from the game: that save is the one that will load without the mod.</li>
+<li><strong>When</strong>: by day (6 am to 8 pm), when things are calm, with Henry standing and not in a conversation. Otherwise nothing is done, and the bottom bar says so plainly: "The mod is NOT removed: do not uninstall it", with the reason.</li>
+<li><strong>A troop of the Director outside</strong>: the removal waits for it. The Director sends no new troop, no mission under way is cut short, and the bottom bar says how many men are still out. Once they are all back, the removal happens by itself, under the same conditions (by day, when things are calm, with Henry standing). In the menu, you can try again right away, or cancel it: the Director then resumes his missions. Loading a game cancels the wait.</li>
 <li><strong>Never during a fight</strong>: if Henry is in combat when the game is about to be saved, the mod waits for the fight to end (one minute at most). If the fight goes on, the game is not saved and the bottom bar says: "Get to safety, then save the game yourself".</li>
+<li><strong>Then</strong>: check in Load that an autosave carries the time of the removal, without loading it. Load no game: quit the game, then uninstall the mod. If the game refused to save, the bottom bar says so: save yourself (in a bed, for example), then quit.</li>
+<li><strong>A game the mod was removed from stays that way</strong>: loaded again with the mod still installed, the mod does nothing there, and the bottom bar says to uninstall it.</li>
+<li><strong>To go back</strong>: reinstall the mod, then load a save from before the removal.</li>
 </ul>
 <h3>Fast travel</h3>
 <ul>
 <li>During <strong>fast travel</strong>, the camp pauses: the trip is as fast as without the mod.</li>
 <li><strong>On arrival</strong>, the camp resumes: meals that fell during the trip are served once, and the Director's mission decision is taken if he missed it. Nothing is lost, nothing is paid twice.</li>
 <li>When you are simply elsewhere, on foot, on horseback, waiting or sleeping, the camp keeps living without you.</li>
+</ul>
+<h3>If the Director dies</h3>
+<ul>
+<li><strong>A new Director arrives at the camp the next morning</strong>, out of Henry's sight. He takes over the chest, the settings and the week's letter; the black bar says so.</li>
+<li>The old one is buried like your men, and his equipment is sold for the chest.</li>
+<li>This also works in a game where he was already dead.</li>
+</ul>
+<h3>The menu key and the settings</h3>
+<ul>
+<li><strong>U menu › Settings</strong>: choose the key that opens the menu: U (default), F2, Insert, End, Page Up or Page Down. Only keys the game leaves free are offered; the choice is kept in the save.</li>
+<li><strong>"Remove the mod from this game"</strong> is also in "Settings".</li>
 </ul>
 <hr>
 <h2 id="en-ch3">3. Building is free</h2>
@@ -1066,6 +1107,11 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <li><strong>The whole camp stops when he comes</strong>: the men present leave their drills, archery and practice bouts and stand in ranks behind Henry, facing him; departures on missions wait. When he leaves, everyone goes back to work. Sentries stay at their posts, men outside stay outside, and an alarm ends the gathering at once.</li>
 <li><strong>The men lent</strong> leave with him in single file, mount at the edge of the camp, and come back under the same name, with their purse.</li>
 </ul>
+<h3>Your men defend Henry</h3>
+<ul>
+<li><strong>When bandits attack Henry outside the camp</strong>, the men following him within 80 m fight them, each the nearest one. Once it is calm, each takes his place behind Henry again.</li>
+<li>Never against a man of the camp, nor during a duel or a fistfight; a wounded man does not fight.</li>
+</ul>
 <hr>
 <h2 id="en-ch8">8. Missions and money</h2>
 <h3>How a mission leaves</h3>
@@ -1135,6 +1181,10 @@ footer{text-align:center;color:var(--doux);padding:24px 16px 40px;font-size:.9re
 <ul>
 <li>Each dead man is replaced at the <strong>hiring price</strong>: recruit 250 groschen, archer 450, crossbowman 570.</li>
 <li>Recruits often lose a man per mission. <strong>Train them</strong>: stronger, they die less and bring in more.</li>
+</ul>
+<h3>On a mission, in the saddle all the way</h3>
+<ul>
+<li><strong>Men sent on a mission stay in the saddle all the way</strong>, to the mission's place or back to the camp, and get off on arrival.</li>
 </ul>
 <hr>
 <h2 id="en-ch9">9. Setting up a craftsman</h2>
